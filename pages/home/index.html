@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        #svg-sun{
+            position: absolute;
+            top: -100% !important;
+            left: 0 !important;
+            width: 100% !important;
+            clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+        }
+        div.h-100{
+            overflow: hidden;
+            position: relative;
+        }
+        div.h-100>img:not(#svg-sun){
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+    </style>
+</head>
+<body>
+    <div class="h-100 bg-dark">
+        <img src="svg/0-sun.svg" id="svg-sun">
+    </div>
+    <div class="h-100 bg-dark">
+        <img style="width: 17%;" src="svg/1-mercury.svg">
+    </div>
+    <div class="h-100 bg-dark">
+        <img style="width: 22%" src="svg/2-venus.svg">
+    </div>
+    <div class="h-100 bg-dark">
+        <img style="width: 24%" src="svg/3-earth.svg">
+    </div>
+    <div class="h-100 bg-dark">
+        <img style="width: 19%" src="svg/4-mars.svg">
+    </div>
+    <div class="h-100 bg-dark">
+        <img style="width: 42%" src="svg/5-jupiter.svg">
+    </div>
+    <div class="h-100 bg-dark">
+        <img style="width: 57%" src="svg/6-saturn.svg">
+    </div>
+    <div class="h-100 bg-dark">
+        <img style="width: 34%" src="svg/7-uranus.svg">
+    </div>
+    <div class="h-100 bg-dark">
+        <img style="width: 23%" src="svg/8-neptune.svg">
+    </div>
+</body>
+</html>
