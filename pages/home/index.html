@@ -6,6 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Kanit:300,400,500&display=swap');
+        body{
+            /* background-image: linear-gradient(#5610b6, #0f0c08, #0f0c08); */
+            background-image: linear-gradient(#44435f, #120f2a);
+            font-family: 'Kanit'
+        }
         #svg-sun{
             position: absolute;
             top: -100% !important;
@@ -17,40 +23,62 @@
             overflow: hidden;
             position: relative;
         }
-        div.h-100>img:not(#svg-sun){
+        div.h-100>img:not(#svg-sun), .center-me{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%)
         }
+        .section-header{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+        #rocket{
+            position: sticky;
+            /* left: 1%; */
+            top: 50%;
+            margin-top: -3%;
+            padding-left: 1em;
+        }
     </style>
 </head>
 <body>
-    <div class="h-100 bg-dark">
+
+    <div id="rocket">
+        <h1 class="text-light">จรวด</h1>
+    </div>
+
+    <div class="h-100">
         <img src="svg/0-sun.svg" id="svg-sun">
     </div>
-    <div class="h-100 bg-dark">
+    <div class="h-100">
         <img style="width: 17%;" src="svg/1-mercury.svg">
+        <h1 class="section-header text-light">ดาวพุธ</h1>
     </div>
-    <div class="h-100 bg-dark">
+    <div class="h-100">
         <img style="width: 22%" src="svg/2-venus.svg">
     </div>
-    <div class="h-100 bg-dark">
+    <div class="h-100">
         <img style="width: 24%" src="svg/3-earth.svg">
     </div>
-    <div class="h-100 bg-dark">
+    <div class="h-100">
         <img style="width: 19%" src="svg/4-mars.svg">
     </div>
-    <div class="h-100 bg-dark">
+    <div class="h-100">
+        <h1 class="center-me text-light text-center">Asteroid does not concern me admiral.<br>I want that ship not an excuses.</h1>
+    </div>
+    <div class="h-100">
         <img style="width: 42%" src="svg/5-jupiter.svg">
     </div>
-    <div class="h-100 bg-dark">
+    <div class="h-100">
         <img style="width: 57%" src="svg/6-saturn.svg">
     </div>
-    <div class="h-100 bg-dark">
+    <div class="h-100">
         <img style="width: 34%" src="svg/7-uranus.svg">
     </div>
-    <div class="h-100 bg-dark">
+    <div class="h-100">
         <img style="width: 23%" src="svg/8-neptune.svg">
     </div>
 </body>
