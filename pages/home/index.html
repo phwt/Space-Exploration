@@ -1,93 +1,116 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Kanit:300,400,500&display=swap');
-        body{
-            /* background-image: linear-gradient(#5610b6, #0f0c08, #0f0c08); */
-            background-image: linear-gradient(#44435f, #120f2a);
-            font-family: 'Kanit'
-        }
-        #svg-sun{
-            position: absolute;
-            top: -100% !important;
-            left: 0 !important;
-            width: 100% !important;
-            clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
-        }
-        div.h-100{
-            overflow: hidden;
-            position: relative;
-        }
-        div.h-100>img:not(#svg-sun), .center-me{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%)
-        }
-        /* .section-header{
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 0%);
-        } */
-        #rocket{
-            position: sticky;
-            /* left: 1%; */
-            top: 50%;
-            margin-top: -3%;
-            padding-left: 3em;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
+
 <body>
-
-    <div id="rocket">
-        <h1 class="text-light">จรวด</h1>
+    <div class="h-100 text-center">
+        <h2 class="text-white center-me">หน้าเปิด</h2>
+    </div>
+    <div class="h-100">
+        <div class="bodies" style="width: 45%;">
+            <img src="svg/0-sun.svg">
+        </div>
     </div>
 
     <div class="h-100">
-        <img src="svg/0-sun.svg" id="svg-sun">
+        <div class="bodies" style="width: 45%;">
+            <img src="svg/1-mercury.svg">
+        </div>
+    </div>
+
+    <div class="h-100">
+        <div class="bodies" style="width: 45%;">
+            <img src="svg/2-venus.svg">
+        </div>
     </div>
     <div class="h-100">
-        <h1 class="section-header text-center text-light pt-4">ดาวพุธ</h1>
-        <img style="width: 17%;" src="svg/1-mercury.svg">
+        <div class="bodies" style="width: 45%;">
+            <img src="svg/3-earth.svg">
+        </div>
     </div>
     <div class="h-100">
-        <h1 class="section-header text-center text-light pt-4">ดาวศุกร์</h1>
-        <img style="width: 22%" src="svg/2-venus.svg">
+        <div class="bodies" style="width: 45%;">
+            <img src="svg/4-mars.svg">
+        </div>
     </div>
     <div class="h-100">
-        <h1 class="section-header text-center text-light pt-4">ดาวโลก</h1>
-        <img style="width: 24%" src="svg/3-earth.svg">
+        <div class="bodies" style="width: 45%;">
+            <h1 class="center-me text-light text-center display-4">[ยังไม่มีรูป]</h1>
+        </div>
     </div>
     <div class="h-100">
-        <h1 class="section-header text-center text-light pt-4">ดาวอังคาร</h1>
-        <img style="width: 19%" src="svg/4-mars.svg">
+        <div class="bodies" style="width: 45%;">
+            <img src="svg/5-jupiter.svg">
+        </div>
     </div>
     <div class="h-100">
-        <h1 class="section-header text-center text-light pt-4">แถบดาวเคราะห์น้อย</h1>
-        <h1 class="center-me text-light text-center display-4">[ยังไม่มีรูป]</h1>
+        <div class="bodies" style="width: 45%;">
+            <img src="svg/6-saturn.svg">
+        </div>
     </div>
     <div class="h-100">
-        <h1 class="section-header text-center text-light pt-4">ดาวพฤหัส</h1>
-        <img style="width: 42%" src="svg/5-jupiter.svg">
+        <div class="bodies" style="width: 45%;">
+            <img src="svg/7-uranus.svg">
+        </div>
     </div>
     <div class="h-100">
-        <h1 class="section-header text-center text-light pt-4">ดาวเสาร์</h1>
-        <img style="width: 57%" src="svg/6-saturn.svg">
+        <div class="bodies" style="width: 45%;">
+            <img src="svg/8-neptune.svg">
+        </div>
     </div>
-    <div class="h-100">
-        <h1 class="section-header text-center text-light pt-4">ดาวยูเรนัส</h1>
-        <img style="width: 34%" src="svg/7-uranus.svg">
-    </div>
-    <div class="h-100">
-        <h1 class="section-header text-center text-light pt-4">ดาวเนปจูน</h1>
-        <img style="width: 23%" src="svg/8-neptune.svg">
+
+    <div class="row text-white" id="overlay">
+        <div class="col-12 overlay-box top">
+            <div class="row no-gutters text-center">
+                <div class="col-12 text-details bottom-rule" id="text-region">ระบบสุริยะชั้นใน</div>
+                <div class="spacing line-narrow"></div>
+                <div class="col-12 text-info-head">ตำแหน่งปัจจุบัน</div>
+                <div class="spacing"></div>
+                <div class="col-12 text-details bottom-rule" id="text-dist"><span class="au">1</span> AU / <span
+                        class="km">149,598,023</span> กม.</div>
+                <div class="spacing line-narrow"></div>
+                <div class="col-12 text-info-head">ระยะห่างจากดวงอาทิตย์</div>
+            </div>
+        </div>
+        <div class="col-12 text-center overlay-box bottom" id="box-detail">
+            <h2 class="mb-0" id="overlay-name">โลก</h2>
+            <span id="overlay-type">ดาวเคราะห์</span>
+            <div class="spacing line"></div>
+            <span id="overlay-details">ดาวเคราะห์ลำดับที่สามจากดวงอาทิตย์
+                และเป็นวัตถุทางดาราศาสตร์เพียงหนึ่งเดียวที่ทราบว่ามีสิ่งมีชีวิต ร้อยละ 71 ของพื้นผิวโลกปกคลุมด้วยน้ำ
+                ซึ่งส่วนใหญ่เป็นมหาสมุทร อีกร้อยละ 29 ที่เหลือเป็นแผ่นดิน</span>
+            <div class="spacing line"></div>
+
+            <div class="row">
+                <div class="col-6 text-right font-weight-bold">ระยะเวลาการโคจร</div>
+                <div class="col text-center" id="overlay-orbital-period">1</div>
+                <div class="col text-left">ปีโลก</div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-right font-weight-bold">ระยะห่างจากดวงอาทิตย์</div>
+                <div class="col text-center" id="overlay-dist-sun">1</div>
+                <div class="col text-left">AU</div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-right font-weight-bold">จำนวนดาวบริวาร</div>
+                <div class="col text-center" id="overlay-moon">1</div>
+                <div class="col text-left">ดวง</div>
+            </div>
+        </div>
+        <div class="col-12 overlay-box readmore text-center"> อ่านเพิ่มเติม > </div>
+        <div id="hidden-elem" class="col-12"></div>
     </div>
 </body>
+
 </html>

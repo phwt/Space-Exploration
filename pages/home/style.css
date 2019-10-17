@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
+body{
+    /* background-image: linear-gradient(#5610b6, #0f0c08, #0f0c08); */
+    /* background-image: linear-gradient(#44435f, #120f2a); */
+    background: url(stars-1080.jpg);
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    /* background: black; */
+    font-family: 'Kanit';
+    font-weight: 200;
+    /* margin-top: -10%; */
+    /* margin-bottom: -10%; */
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    overflow-x: hidden;
+}
+div.h-100{
+    overflow: hidden;
+    position: relative;
+}
+div.h-100>.bodies, .center-me, .bodies > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* height: 100%; */
+}
+
+.overlay-box{
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1em;
+    transition: height 0.5s;
+}
+
+.overlay-box.top{
+    height: auto;
+    margin-bottom: 1em;
+    font-weight: 300;
+}
+
+.overlay-box.bottom{
+    height: 90%;
+}
+
+.overlay-box.readmore{
+    border-top: 0;
+    transition: .2s;
+}
+
+.overlay-box.readmore:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.overlay-box.readmore:active{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#overlay {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 50%;
+    /* bottom: 0; */
+    left: 3vw;
+    width: 20vw;
+    transform: translateY(50%);
+}
+
+.text-details{
+    font-size: 24px;
+}
+
+hr{
+    border-color: white;
+}
+
+#hidden-elem{
+    visibility: hidden;
+    /* position: absolute; */
+    /* right: 0; */
+    border: 1px solid red;
+}
+
+.spacing{
+    height: 1em;
+    width: 100%;
+}
+
+.spacing.line{
+    height: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: .5em 0 .5em 0;
+}
+
+.spacing.line-narrow{
+    height: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: .25em 0 .25em 0;
+}
+
+.text-info-head{
+    opacity: .7;
+}
