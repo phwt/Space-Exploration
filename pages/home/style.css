@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
 body{
-    /* background-image: linear-gradient(#5610b6, #0f0c08, #0f0c08); */
-    /* background-image: linear-gradient(#44435f, #120f2a); */
     background: url(stars-1080.jpg);
-    /* background-repeat: no-repeat; */
     background-attachment: fixed;
-    /* background: black; */
     font-family: 'Kanit';
     font-weight: 200;
-    /* margin-top: -10%; */
-    /* margin-bottom: -10%; */
 
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -27,7 +21,6 @@ div.h-100>.bodies, .center-me, .bodies > img{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* height: 100%; */
 }
 
 .overlay-box{
@@ -66,7 +59,6 @@ div.h-100>.bodies, .center-me, .bodies > img{
     position: -webkit-sticky;
     position: sticky;
     bottom: 50%;
-    /* bottom: 0; */
     left: 3vw;
     min-width: 22vw;
     max-width: 22vw;
@@ -83,13 +75,6 @@ div.h-100>.bodies, .center-me, .bodies > img{
 
 hr{
     border-color: white;
-}
-
-#hidden-elem{
-    visibility: hidden;
-    /* position: absolute; */
-    /* right: 0; */
-    border: 1px solid red;
 }
 
 .spacing{
@@ -118,7 +103,5 @@ hr{
 }
 
 .bodies > a > img:hover{
-    /* transition: .2s; */
-    /* filter: drop-shadow(0px 0px 16px rgba(255, 255, 255, 0.5)); */
     transform: rotate(5deg);
 }
