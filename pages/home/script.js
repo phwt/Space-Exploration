@@ -1,15 +1,15 @@
-function setContent(content) {
-    $("#hidden-elem").html(content);
-    $("#box-detail").html(content);
-    $("#box-detail").height($("#hidden-elem").height());
-}
+// function setContent(content) {
+//     $("#hidden-elem").html(content);
+//     $("#box-detail").html(content);
+//     $("#box-detail").height($("#hidden-elem").height());
+// }
 
-function refreshOverlay(){
-    console.log($("#box-detail").html())
-    $("#hidden-elem").html($("#box-detail").html());
-    console.log($("#hidden-elem").height())
-    $("#box-detail").height($("#hidden-elem").height());
-}
+// function refreshOverlay(){
+//     console.log($("#box-detail").html())
+//     $("#hidden-elem").html($("#box-detail").html());
+//     console.log($("#hidden-elem").height())
+//     $("#box-detail").height($("#hidden-elem").height());
+// }
 
 let getSection = () => Math.floor(($(document).scrollTop() + window.innerHeight / 2) / window.innerHeight);
 let numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
