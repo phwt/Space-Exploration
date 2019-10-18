@@ -6,7 +6,9 @@ data = [
         orbital_period: 0,
         au: 0,
         moons: 0,
-        img: "svg/0-sun.svg"
+        img: "svg/0-sun.svg",
+        size: 55,
+        link: ""
     },
     {
         name: "ดาวพุธ",
@@ -15,7 +17,9 @@ data = [
         orbital_period: 0,
         au: 0,
         moons: 0,
-        img: "svg/1-mercury.svg"
+        img: "svg/1-mercury.svg",
+        size: 20,
+        link: ""
     },
     {
         name: "ดาวศุกร์",
@@ -24,7 +28,9 @@ data = [
         orbital_period: 0,
         au: 0,
         moons: 0,
-        img: "svg/2-venus.svg"
+        img: "svg/2-venus.svg",
+        size: 20,
+        link: ""
     },
     {
         name: "โลก",
@@ -33,7 +39,9 @@ data = [
         orbital_period: 1,
         au: 1,
         moons: 1,
-        img: "svg/3-earth.svg"
+        img: "svg/3-earth.svg",
+        size: 20,
+        link: ""
     }, {
         name: "ดาวอังคาร",
         type: "ดาวเคราะห์หิน (Terrestrial Planet)",
@@ -41,7 +49,9 @@ data = [
         orbital_period: 1.88,
         au: 1.5,
         moons: 2,
-        img: "svg/4-mars.svg"
+        img: "svg/4-mars.svg",
+        size: 20,
+        link: ""
     },
     {
         name: "แถบดาวเคราะห์น้อย",
@@ -50,7 +60,9 @@ data = [
         orbital_period: 0,
         au: 0,
         moons: 0,
-        img: ""
+        img: "",
+        size: 20,
+        link: ""
     },
     {
         name: "ดาวพฤหัสบดี",
@@ -59,7 +71,9 @@ data = [
         orbital_period: 0,
         au: 0,
         moons: 0,
-        img: "svg/5-jupiter.svg"
+        img: "svg/5-jupiter.svg",
+        size: 20,
+        link: ""
     },
     {
         name: "ดาวเสาร์",
@@ -68,7 +82,9 @@ data = [
         orbital_period: 0,
         au: 0,
         moons: 0,
-        img: "svg/6-saturn.svg"
+        img: "svg/6-saturn.svg",
+        size: 20,
+        link: ""
     },
     {
         name: "ดาวยูเรนัส",
@@ -77,7 +93,9 @@ data = [
         orbital_period: 0,
         au: 0,
         moons: 0,
-        img: "svg/7-uranus.svg"
+        img: "svg/7-uranus.svg",
+        size: 20,
+        link: ""
     },
     {
         name: "ดาวเนปจูน",
@@ -86,6 +104,8 @@ data = [
         orbital_period: 0,
         au: 0,
         moons: 0,
-        img: "svg/8-neptune.svg"
+        img: "svg/8-neptune.svg",
+        size: 20,
+        link: ""
     }
 ]

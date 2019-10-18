@@ -22,7 +22,7 @@ function updateSection() {
     $("#text-dist > .au").text(Math.floor(Math.random() * 50));
     $("#text-dist > .km").text(numberWithCommas(Math.floor(Math.random() * 50 * 149598023)));
 
-    if(getSection() != currentSection){
+    if (getSection() != currentSection) {
         currentSection = getSection()
         setOverlay(data[getSection() - 1])
     }
@@ -34,13 +34,25 @@ function updateSection() {
 }
 
 $(document).ready(function () {
+
+    var parallax = document.querySelectorAll("body"),
+        speed = -0.05;
+
+    window.onscroll = function () {
+        [].slice.call(parallax).forEach(function (el, i) {
+            var windowYOffset = window.pageYOffset,
+                elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+            el.style.backgroundPosition = elBackgrounPos;
+        });
+    };
+
     $("#overlay").hide();
 
-    for(body of data){
+    for (body of data) {
         $("#content-area").append('\
             <div class="h-100">\
-            <div class="bodies" style="width: 20%;">\
-                <a href=""><img src="'+ body.img +'"></a>\
+            <div class="bodies" style="width: ' + body.size + '%;">\
+                <a href="' + body.link + '"><img src="' + body.img + '"></a>\
             </div>\
         </div>\
         ')
