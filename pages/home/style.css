@@ -68,8 +68,13 @@ div.h-100>.bodies, .center-me, .bodies > img{
     bottom: 50%;
     /* bottom: 0; */
     left: 3vw;
-    width: 20vw;
+    min-width: 22vw;
+    max-width: 22vw;
     transform: translateY(50%);
+}
+
+.row-info [id^=overlay]{
+    margin: 0 1em 0 1em;
 }
 
 .text-details{
@@ -106,4 +111,14 @@ hr{
 
 .text-info-head{
     opacity: .7;
+}
+
+.bodies > a > img{
+    transition: .2s;
+}
+
+.bodies > a > img:hover{
+    /* transition: .2s; */
+    /* filter: drop-shadow(0px 0px 16px rgba(255, 255, 255, 0.5)); */
+    transform: rotate(5deg);
 }
