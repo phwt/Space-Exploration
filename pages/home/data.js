@@ -59,7 +59,7 @@ data = [
         type: "แถบดาวเคราะห์น้อย",
         details: "",
         orbital_period: 0,
-        au: 0,
+        au: 2,
         moons: 0,
         img: "",
         size: 20,
