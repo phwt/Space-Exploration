@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="home">กลับไป</div>
+
+    <span id="slide_box_sp" class="left">
+        <div class="content_slide">
+            <div id="content_slide_in">
+                <a href="#" class="list_nav"> ข้อความ 1</a>
+                <a href="#" class="list_nav"> ข้อความ 2</a>
+                <a href="#" class="list_nav"> ข้อความ 3</a>
+                <a href="#" class="list_nav"> ข้อความ 4</a>
+                <a href="#" class="list_nav"> ข้อความ 5</a>
+                <a href="#" class="list_nav"> ข้อความ 6</a>
+                <a href="#" class="list_nav"> ข้อความ 7</a>
+            </div>
+        </div>
+    </span>
+
+    <span id="slide_box_sp" class="mid">
+        <div class="go_l_nav" title="Back"></div>
+        <div class="content_slide">
+            <div id="content_slide_in">
+                <a href="#" class="list_nav"> ข้อความ 2</a>
+                <a href="#" class="list_nav"> ข้อความ 3</a>
+                <a href="#" class="list_nav"> ข้อความ 4</a>
+                <a href="#" class="list_nav"> ข้อความ 5</a>
+                <a href="#" class="list_nav"> ข้อความ 6</a>
+                <a href="#" class="list_nav"> ข้อความ 7</a>
+                <a href="#" class="list_nav"> ข้อความ 8</a>
+            </div>
+        </div>
+        <div class="go_r_nav" title="Next"></div>
+    </span>
+
+    <span id="slide_box_sp">
+        <div class="content_slide">
+            <div id="content_slide_in">
+                <a href="#" class="list_nav"> ข้อความ 3</a>
+                <a href="#" class="list_nav"> ข้อความ 4</a>
+                <a href="#" class="list_nav"> ข้อความ 5</a>
+                <a href="#" class="list_nav"> ข้อความ 6</a>
+                <a href="#" class="list_nav"> ข้อความ 7</a>
+                <a href="#" class="list_nav"> ข้อความ 8</a>
+            </div>
+        </div>
+    </span>
+
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        var box_w = 370;  // กำหนดความกว้างของแต่ละ box
+        var box_h = 370;  // กำหนดความสูงของ slide
+        var box_show = 1;  // กำหนดจำนวนรายการที่จะแสดงเริ่มต้น
+        var nav_w = 30;   // กำหนดความกว้างของตัวเลื่อยนซ้าย ขวา
+        var marGL = 2;     // กำหนดระยะห่างของแต่ละ box 
+        var box_rl = 170; //กำหนดระยะความสูงของตัวเลื่อยนซ้าย ขวา
+
+
+        var slide_w = (box_show * (marGL + box_w)) + (nav_w * 2) + marGL
+        var content_w = (box_show * (marGL + box_w));
+        var nol_nav_l, new_nev_l = null;
+        $("span#slide_box_sp").width(slide_w);
+        $("a.list_nav").width(box_w).css("marginLeft", marGL);
+        $("span#slide_box_sp,span#slide_box_sp *").height(box_h);
+        $("div.go_l_nav,div.go_r_nav").width(nav_w);
+        $("div.go_l_nav,div.go_r_nav").height(30).css("marginTop", box_rl);
+        $("div.go_r_nav").css("marginLeft", marGL);
+        $("div.content_slide").width(content_w);
+        $("div#content_slide_in").css("marginLeft", "0px");
+        $("div.go_r_nav").click(function () {
+            var numA = $("div#content_slide_in > a").length - box_show;
+            numA = numA * (box_w + marGL);
+            var charA = "-" + numA + "px";
+            now_nav_l = $("div#content_slide_in").css("marginLeft");
+            if (now_nav_l != charA) {
+                now_nav_l = now_nav_l.replace("px", "");
+                new_nav_l = now_nav_l - box_w - marGL;
+                $("div#content_slide_in").animate({
+                    marginLeft: new_nav_l
+                }, 100);
+            }
+        });
+        $("div.go_l_nav").click(function () {
+            now_nav_l = $("div#content_slide_in").css("marginLeft");
+            if (now_nav_l != "0px") {
+                now_nav_l = now_nav_l.replace("px", "");
+                now_nav_l = parseInt(now_nav_l);
+                new_nav_l = now_nav_l + box_w + marGL;
+                $("div#content_slide_in").animate({
+                    marginLeft: new_nav_l
+                }, 100);
+            }
+        });
+    });
+</script>
+
+</html>
