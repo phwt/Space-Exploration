@@ -17,10 +17,12 @@ div#home {
     text-align: center;
     font-size: 20px;
     color: aliceblue;
+    
 }
 
 span.mid {
     margin-right: 4%;
+    
 }
 
 span.left {
@@ -30,6 +32,7 @@ span.left {
 span#slide_box_sp {
     display: block;
     float: left;
+    border-radius: 50%;
 }
 
 span {
@@ -41,6 +44,7 @@ div.go_l_nav {
     cursor: pointer;
     background-color: rgb(179, 131, 131);
     float: left;
+    
 }
 
 div.go_r_nav {
@@ -55,6 +59,7 @@ div.content_slide {
     margin: 0px;
     float: left;
     overflow: hidden;
+    border-radius: 10%;
 }
 
 a.list_nav {
@@ -78,14 +83,15 @@ a.list_nav {
 div#content_slide_in {
     display: block;
     margin-left: 0px;
+    border-radius: 50%;
 }
 
-span#slide_box_sp_1,
+/* span#slide_box_sp_1,
 span#slide_box_sp_1 * {
     margin-top: 3%;
     height: 500;
     width: 100;
-}
+} */
 
 div.content_slide_1 {
     display: block;
