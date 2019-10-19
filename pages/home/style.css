@@ -86,7 +86,7 @@ div.h-100>.bodies,
     transform: translateY(50%);
 }
 
-.row-info [id^=overlay] {
+.row-info .field-value {
     margin: 0 1em 0 1em;
 }
 
