@@ -33,6 +33,10 @@ function updateSection() {
         $("#overlay").stop().fadeIn();
 }
 
+let scrollDown = () => {
+    $(document).scrollTop(window.innerHeight);
+}
+
 $(document).ready(function () {
 
     var parallax = document.querySelectorAll("body"),
@@ -52,11 +56,17 @@ $(document).ready(function () {
         $("#content-area").append('\
             <div class="h-100">\
             <div class="bodies" style="width: ' + body.size + '%;">\
-                <a href="' + body.link + '"><img src="' + body.img + '"></a>\
+                <a href="' + body.link + '"><img '+ ((body.glow) ? "class='glow'" : "") +' src="' + body.img + '"></a>\
             </div>\
         </div>\
         ')
     }
 
     $(document).scroll(updateSection);
+
+    $("#btn-open-section").click(() => {
+        $('html, body').animate({
+            scrollTop: window.innerHeight
+        }, 2000);
+    });
 });
