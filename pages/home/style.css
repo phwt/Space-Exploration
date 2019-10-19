@@ -146,3 +146,10 @@ hr {
     opacity: .5;
     font-size: 14px
 }
+
+.h-100.section{
+    background: url(svg/orbit.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    shape-rendering: auto;
+}

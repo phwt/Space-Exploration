@@ -128,7 +128,7 @@ $(document).ready(function () {
     // Propagate data onto page
     for (body of data) {
         $("#content-area").append('\
-            <div class="h-100">\
+            <div class="h-100 '+ ((body.no_orbit) ? "" : "section") +'">\
             <div class="bodies" style="width: ' + body.size + '%">\
                 <a href="' + body.link + '"><img ' + ((body.glow) ? "class='glow'" : "") + ' src="' + body.img + '"></a>\
             </div>\

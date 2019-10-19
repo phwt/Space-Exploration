@@ -10,6 +10,7 @@ data = [
         size: 40,
         link: "",
         glow: true,
+        no_orbit: true,
         custom:[
             {
                 title: "ระยะเวลาโคจรรอบทางช้างเผือก",
@@ -79,6 +80,7 @@ data = [
         img: "",
         size: 20,
         link: "",
+        no_orbit: true,
         custom:[
             {
                 title: "มวลทั้งหมด",
