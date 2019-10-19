@@ -1,5 +1,7 @@
 let currentSection = 0
 let getSection = () => Math.floor(($(document).scrollTop() + window.innerHeight / 2) / window.innerHeight)
+let getSectionMid = () => Math.floor($(document).scrollTop() / window.innerHeight)
+let getMidpoint = (section) => (section * window.innerHeight) + (window.innerHeight / 2)
 let numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
 function fadeChangeText(elem, content) {
@@ -20,19 +22,40 @@ function setOverlay(data) {
 function updateSection() {
     section = getSection()
     $("#text-region").text((section > 4) ? "ระบบสุริยะชั้นนอก" : "ระบบสุริยะชั้นใน")
-    $("#text-dist > .au").text(Math.floor(Math.random() * 50))
-    $("#text-dist > .km").text(numberWithCommas(Math.floor(Math.random() * 50 * 149598023)))
+    
+    try{    
+        scroll_percentage = calcPercent(getMidpoint(getSectionMid()), $(document).scrollTop() + window.innerHeight / 2 )
+        set_au = calcAU(getSectionMid())
+        dist_au = scroll_percentage * (set_au.bottom - set_au.top) + set_au.top
+        $("#text-dist > .au").text(Math.floor(dist_au * 100) / 100)
+        $("#text-dist > .km").text(numberWithCommas(Math.floor(dist_au * 149597871)))
+    }catch(TypeError){
+        // do nothing
+    }
+
+    if(section == 0)
+        $("#overlay").stop().fadeOut()
+    else
+        $("#overlay").stop().fadeIn()
 
     if (section != currentSection) {
         currentSection = section
-        setOverlay(data[section - 1])
+        try{
+            setOverlay(data[section - 1])
+        }catch(TypeError){
+            // do nothing
+        }
     }
-
-    (getSection() == 0) ? $("#overlay").stop().fadeOut() : $("#overlay").stop().fadeIn()
 }
 
-let scrollDown = () => {
-    $(document).scrollTop(window.innerHeight)
+function calcAU(section){
+    if(section == 1)
+        return {top: 0, bottom: data[section].au}
+    return {top: data[section-1].au, bottom: data[section].au}
+}
+
+function calcPercent(start, current){
+    return ((current - start) / ((start + window.innerHeight) - start))
 }
 
 $(document).ready(function () {
@@ -46,6 +69,10 @@ $(document).ready(function () {
         $('html, body').animate({
             scrollTop: window.innerHeight
         }, 2000)
+    })
+
+    $(".overlay-box.readmore").click(() => {
+        alert("you clicked " + data[getSection()-1].name)
     })
 
     // Background parallax scrolling
