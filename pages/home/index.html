@@ -1,57 +1,62 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.min.css">
-    <style>
-        #svg-sun{
-            position: absolute;
-            top: -100% !important;
-            left: 0 !important;
-            width: 100% !important;
-            clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
-        }
-        div.h-100{
-            overflow: hidden;
-            position: relative;
-        }
-        div.h-100>img:not(#svg-sun){
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%)
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <div class="h-100 bg-dark">
-        <img src="svg/0-sun.svg" id="svg-sun">
+    <div class="h-100 text-center">
+        <div class="center-me">
+            <img class="mb-5" src="https://via.placeholder.com/300x200" alt=""><br>
+            <button class="mt-5 btn-space" id="btn-open-section">wow</button>
+        </div>
+        <!-- <h2 class="text-white center-me">หน้าเปิด</h2> -->
     </div>
-    <div class="h-100 bg-dark">
-        <img style="width: 17%;" src="svg/1-mercury.svg">
-    </div>
-    <div class="h-100 bg-dark">
-        <img style="width: 22%" src="svg/2-venus.svg">
-    </div>
-    <div class="h-100 bg-dark">
-        <img style="width: 24%" src="svg/3-earth.svg">
-    </div>
-    <div class="h-100 bg-dark">
-        <img style="width: 19%" src="svg/4-mars.svg">
-    </div>
-    <div class="h-100 bg-dark">
-        <img style="width: 42%" src="svg/5-jupiter.svg">
-    </div>
-    <div class="h-100 bg-dark">
-        <img style="width: 57%" src="svg/6-saturn.svg">
-    </div>
-    <div class="h-100 bg-dark">
-        <img style="width: 34%" src="svg/7-uranus.svg">
-    </div>
-    <div class="h-100 bg-dark">
-        <img style="width: 23%" src="svg/8-neptune.svg">
+
+    <span id="content-area"></span>
+
+    <div class="row text-white" id="overlay">
+        <div class="col-12 overlay-box top">
+            <div class="row no-gutters text-center">
+                <div class="col-12 text-details bottom-rule" id="text-region">ระบบสุริยะชั้นใน</div>
+                <div class="spacing line-narrow"></div>
+                <div class="col-12 text-info-head">ตำแหน่งปัจจุบัน</div>
+                <div class="spacing"></div>
+                <div class="col-12 text-details bottom-rule" id="text-dist"><span class="au">1</span> AU / <span
+                        class="km">149,598,023</span> กม.</div>
+                <div class="spacing line-narrow"></div>
+                <div class="col-12 text-info-head">ระยะห่างจากดวงอาทิตย์</div>
+            </div>
+        </div>
+        <div class="col-12 text-center overlay-box bottom" id="box-detail">
+            <h2 class="mb-0" id="overlay-name"></h2>
+            <span id="overlay-type"></span>
+            <div class="spacing line"></div>
+            <span id="overlay-details"></span>
+            <div class="spacing line"></div>
+
+            <div class="row row-info">
+                <div class="col-12" id="overlay-field-1"></div>
+                <div class="col-12" id="overlay-field-2"></div>
+                <div class="col-12" id="overlay-field-3"></div>
+            </div>
+        </div>
+    <div class="col-12 overlay-box readmore text-center"> อ่านเพิ่มเติม &gt; </div>
+    <div class="col-12 mt-2 text-center tips">
+        AU: Astronomical Unit / หน่วยดาราศาสตร์<br>
+        ระยะห่างระหว่างโลกกับดวงอาทิตย์<br>
+        1 AU = 149,597,871 กิโลเมตร
     </div>
 </body>
+
 </html>
