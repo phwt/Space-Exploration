@@ -2,19 +2,34 @@ data = [
     {
         name: "ดวงอาทิตย์",
         type: "ดาวฤกษ์",
-        details: "",
+        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 0,
         au: 0,
         moons: 0,
         img: "svg/0-sun-noflare.svg",
         size: 40,
         link: "",
-        glow: true
+        glow: true,
+        custom:[
+            {
+                title: "ระยะเวลาโคจรรอบทางช้างเผือก",
+                value: "230",
+                unit: "ล้านปี (โลก)"
+            },{
+                title: "ระยะห่างจากจุดศูนย์กลางทางช้างเผือก",
+                value: "27,200",
+                unit: "ปีแสง"
+            },{
+                title: "จำนวนดาวเคราะห์บริวาร",
+                value: "8",
+                unit: "ดวง"
+            }
+        ]
     },
     {
         name: "ดาวพุธ",
         type: "ดาวเคราะห์หิน (Terrestrial Planet)",
-        details: "",
+        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 87,
         au: 0.4,
         moons: 0,
@@ -25,7 +40,7 @@ data = [
     {
         name: "ดาวศุกร์",
         type: "ดาวเคราะห์หิน (Terrestrial Planet)",
-        details: "",
+        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 224,
         au: 0.7,
         moons: 0,
@@ -57,18 +72,33 @@ data = [
     {
         name: "แถบดาวเคราะห์น้อย",
         type: "แถบดาวเคราะห์น้อย",
-        details: "",
+        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 0,
-        au: 2,
+        au: 2.7,
         moons: 0,
         img: "",
         size: 20,
-        link: ""
+        link: "",
+        custom:[
+            {
+                title: "มวลทั้งหมด",
+                value: "4%",
+                unit: "ของดวงจันทร์"
+            },{
+                title: "ระยะห่างจากดวงอาทิตย์",
+                value: "2.2-3.2",
+                unit: "AU"
+            },{
+                title: "จำนวนดาวเคราะห์แคระ",
+                value: "1",
+                unit: "ดวง"
+            }
+        ]
     },
     {
         name: "ดาวพฤหัสบดี",
         type: "ดาวแก๊สยักษ์ (Gas Giant)",
-        details: "",
+        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 4332,
         au: 5.2,
         moons: 79,
@@ -79,7 +109,7 @@ data = [
     {
         name: "ดาวเสาร์",
         type: "ดาวแก๊สยักษ์ (Gas Giant)",
-        details: "",
+        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 10759,
         au: 9.5,
         moons: 82,
@@ -90,7 +120,7 @@ data = [
     {
         name: "ดาวยูเรนัส",
         type: "ดาวแก๊สยักษ์ (Gas Giant)",
-        details: "",
+        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 30688,
         au: 19.2,
         moons: 27,
@@ -101,7 +131,7 @@ data = [
     {
         name: "ดาวเนปจูน",
         type: "ดาวแก๊สยักษ์ (Gas Giant)",
-        details: "",
+        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 60182,
         au: 30.1,
         moons: 14,
