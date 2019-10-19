@@ -1,56 +1,77 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
-body{
-    background: url(stars-1080.jpg);
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background: url(stars-1080.jpg); */
+    /* background: linear-gradient(rgba(255,255,255,0.5), green); */
     background-attachment: fixed;
+
+    background-image:
+        /* linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0)), */
+        url(stars-1080.jpg);
+
     font-family: 'Kanit';
     font-weight: 200;
 
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
 
     overflow-x: hidden;
 }
-div.h-100{
+
+div.h-100 {
     overflow: hidden;
     position: relative;
 }
-div.h-100>.bodies, .center-me, .bodies > img{
+
+div.h-100>.bodies,
+.center-me,
+.bodies>img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.overlay-box{
+.overlay-box {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 1em;
     transition: height 0.5s;
 }
 
-.overlay-box.top{
+.overlay-box.top {
     height: auto;
     margin-bottom: 1em;
     font-weight: 300;
 }
 
-.overlay-box.bottom{
+.overlay-box.bottom {
     height: 90%;
 }
 
-.overlay-box.readmore{
+.overlay-box.readmore {
     border-top: 0;
     transition: .2s;
 }
 
-.overlay-box.readmore:hover{
+.overlay-box.readmore:hover,
+.btn-space:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.1);
 }
 
-.overlay-box.readmore:active{
+.overlay-box.readmore:active,
+.btn-space:active {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.2);
 }
@@ -65,43 +86,58 @@ div.h-100>.bodies, .center-me, .bodies > img{
     transform: translateY(50%);
 }
 
-.row-info [id^=overlay]{
+.row-info [id^=overlay] {
     margin: 0 1em 0 1em;
 }
 
-.text-details{
+.text-details {
     font-size: 24px;
 }
 
-hr{
+hr {
     border-color: white;
 }
 
-.spacing{
+.spacing {
     height: 1em;
     width: 100%;
 }
 
-.spacing.line{
+.spacing.line {
     height: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin: .5em 0 .5em 0;
 }
 
-.spacing.line-narrow{
+.spacing.line-narrow {
     height: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin: .25em 0 .25em 0;
 }
 
-.text-info-head{
+.text-info-head {
     opacity: .7;
 }
 
-.bodies > a > img{
+.bodies>a>img {
     transition: .2s;
 }
 
-.bodies > a > img:hover{
+.bodies>a>img:hover {
     transform: rotate(5deg);
+}
+
+.btn-space {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1em 1.5em 1em 1.5em;
+    font-weight: 300;
+    outline: none !important;
+    transition: .2s;
+}
+
+.glow {
+    -webkit-filter: drop-shadow(0px 0px 50px rgba(255, 255, 209, 1));
+    filter: drop-shadow(0px 0px 50px rgba(255, 255, 209, 1));
 }
