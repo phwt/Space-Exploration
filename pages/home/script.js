@@ -67,9 +67,9 @@ function updateSection() {
     }
 
     if (section == 0)
-        $("#overlay").stop().fadeOut()
+        $("#overlay-l, #overlay-r").stop().fadeOut()
     else
-        $("#overlay").stop().fadeIn()
+        $("#overlay-l, #overlay-r").stop().fadeIn()
 
     if (section != currentSection) {
         currentSection = section
@@ -99,7 +99,7 @@ function calcPercent(start, current) {
 
 $(document).ready(function () {
 
-    $("#overlay").hide()
+    $("#overlay-l, #overlay-r").hide()
 
     // Event handlers
     $(document).scroll(updateSection)
