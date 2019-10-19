@@ -1,72 +1,72 @@
-let currentSection = 0;
+let currentSection = 0
 let getSection = () => Math.floor(($(document).scrollTop() + window.innerHeight / 2) / window.innerHeight)
 let numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
 function fadeChangeText(elem, content) {
     $(elem).fadeOut(function () {
-        $(this).text(content).fadeIn();
-    });
+        $(this).text(content).fadeIn()
+    })
 }
 
 function setOverlay(data) {
-    fadeChangeText("#overlay-name", data.name);
-    fadeChangeText("#overlay-type", data.type);
-    fadeChangeText("#overlay-details", data.details);
-    fadeChangeText("#overlay-orbital-period", data.orbital_period);
-    fadeChangeText("#overlay-dist-sun", data.au);
-    fadeChangeText("#overlay-moon", data.moons);
+    fadeChangeText("#overlay-name", data.name)
+    fadeChangeText("#overlay-type", data.type)
+    fadeChangeText("#overlay-details", data.details)
+    fadeChangeText("#overlay-orbital-period", numberWithCommas(data.orbital_period))
+    fadeChangeText("#overlay-dist-sun", data.au)
+    fadeChangeText("#overlay-moon", data.moons)
 }
 
 function updateSection() {
-    $("#text-region").text((getSection() > 4) ? "ระบบสุริยะชั้นนอก" : "ระบบสุริยะชั้นใน");
-    $("#text-dist > .au").text(Math.floor(Math.random() * 50));
-    $("#text-dist > .km").text(numberWithCommas(Math.floor(Math.random() * 50 * 149598023)));
+    section = getSection()
+    $("#text-region").text((section > 4) ? "ระบบสุริยะชั้นนอก" : "ระบบสุริยะชั้นใน")
+    $("#text-dist > .au").text(Math.floor(Math.random() * 50))
+    $("#text-dist > .km").text(numberWithCommas(Math.floor(Math.random() * 50 * 149598023)))
 
-    if (getSection() != currentSection) {
-        currentSection = getSection()
-        setOverlay(data[getSection() - 1])
+    if (section != currentSection) {
+        currentSection = section
+        setOverlay(data[section - 1])
     }
 
-    if (getSection() == 0)
-        $("#overlay").stop().fadeOut();
-    else
-        $("#overlay").stop().fadeIn();
+    (getSection() == 0) ? $("#overlay").stop().fadeOut() : $("#overlay").stop().fadeIn()
 }
 
 let scrollDown = () => {
-    $(document).scrollTop(window.innerHeight);
+    $(document).scrollTop(window.innerHeight)
 }
 
 $(document).ready(function () {
 
-    var parallax = document.querySelectorAll("body"),
-        speed = -0.05;
+    $("#overlay").hide()
 
+    // Event handlers
+    $(document).scroll(updateSection)
+
+    $("#btn-open-section").click(() => {
+        $('html, body').animate({
+            scrollTop: window.innerHeight
+        }, 2000)
+    })
+
+    // Background parallax scrolling
+    var parallax = document.querySelectorAll("body"),
+        speed = -0.05
     window.onscroll = function () {
         [].slice.call(parallax).forEach(function (el, i) {
             var windowYOffset = window.pageYOffset,
-                elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-            el.style.backgroundPosition = elBackgrounPos;
-        });
-    };
+                elBackgrounPos = "50% " + (windowYOffset * speed) + "px"
+            el.style.backgroundPosition = elBackgrounPos
+        })
+    }
 
-    $("#overlay").hide();
-
+    // Propagate data onto page
     for (body of data) {
         $("#content-area").append('\
             <div class="h-100">\
-            <div class="bodies" style="width: ' + body.size + '%;">\
+            <div class="bodies" style="width: ' + body.size + '%">\
                 <a href="' + body.link + '"><img '+ ((body.glow) ? "class='glow'" : "") +' src="' + body.img + '"></a>\
             </div>\
         </div>\
         ')
     }
-
-    $(document).scroll(updateSection);
-
-    $("#btn-open-section").click(() => {
-        $('html, body').animate({
-            scrollTop: window.innerHeight
-        }, 2000);
-    });
-});
+})
