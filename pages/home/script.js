@@ -42,13 +42,17 @@ function setOverlay(data) {
         }]
     }
 
-    fadeChange("#overlay-name", data.name)
-    fadeChange("#overlay-type", data.type)
-    fadeChange("#overlay-details", data.details)
-    fadeChange("#overlay-field-1", '<span class="font-weight-bold">' + field[0].title + '</span><span class="field-value">' + field[0].value + '</span>' + field[0].unit)
-    fadeChange("#overlay-field-2", '<span class="font-weight-bold">' + field[1].title + '</span><span class="field-value">' + field[1].value + '</span>' + field[1].unit)
-    fadeChange("#overlay-field-3", '<span class="font-weight-bold">' + field[2].title + '</span><span class="field-value">' + field[2].value + '</span>' + field[2].unit)
+    $("#overlay-l").fadeOut(function () {
+        $("#overlay-name").html(data.name)
+        $("#overlay-type").html(data.type)
+        $("#overlay-details").html(data.details)
+        $("#overlay-field-1").html('<span class="font-weight-bold">' + field[0].title + '</span><span class="field-value">' + field[0].value + '</span>' + field[0].unit)
+        $("#overlay-field-2").html('<span class="font-weight-bold">' + field[1].title + '</span><span class="field-value">' + field[1].value + '</span>' + field[1].unit)
+        $("#overlay-field-3").html('<span class="font-weight-bold">' + field[2].title + '</span><span class="field-value">' + field[2].value + '</span>' + field[2].unit)
     
+        $(this).fadeIn()
+    })
+    // $("#overlay-l").hide()
 }
 
 function updateSection() {
@@ -68,15 +72,18 @@ function updateSection() {
 
     if (section == 0)
         $("#overlay-l, #overlay-r").stop().fadeOut()
-    else
-        $("#overlay-l, #overlay-r").stop().fadeIn()
+    else if (section == 1)
+        $("#overlay-r").fadeIn()
 
+    console.log(section + " " + currentSection)
     if (section != currentSection) {
         currentSection = section
+        console.log("trigger")
+        // console.log("wow")
         try {
             setOverlay(data[section - 1])
         } catch (TypeError) {
-            // do nothing
+            console.log("you fool")
         }
     }
 }
