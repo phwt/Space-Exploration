@@ -52,7 +52,6 @@ function setOverlay(data) {
     
         $(this).fadeIn()
     })
-    // $("#overlay-l").hide()
 }
 
 function updateSection() {
@@ -75,15 +74,12 @@ function updateSection() {
     else if (section == 1)
         $("#overlay-r").fadeIn()
 
-    console.log(section + " " + currentSection)
     if (section != currentSection) {
         currentSection = section
-        console.log("trigger")
-        // console.log("wow")
         try {
             setOverlay(data[section - 1])
         } catch (TypeError) {
-            console.log("you fool")
+            //do nothing
         }
     }
 }
