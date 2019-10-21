@@ -57,9 +57,9 @@ div.h-100>.bodies,
     font-weight: 300;
 }
 
-.overlay-box.bottom {
+/* .overlay-box.bottom {
     height: 90%;
-}
+} */
 
 .overlay-box.readmore {
     border-top: 0;
@@ -149,10 +149,10 @@ hr {
     transition: .2s;
 }
 
-.glow {
+/* .glow {
     -webkit-filter: drop-shadow(0px 0px 250px rgba(255, 255, 209, 1));
     filter: drop-shadow(0px 0px 250px rgba(255, 255, 209, 1));
-}
+} */
 
 .tips {
     opacity: .5;
