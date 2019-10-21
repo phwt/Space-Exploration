@@ -35,7 +35,7 @@ data = [
         au: 0.4,
         moons: 0,
         img: "svg/1-mercury.svg",
-        size: 20,
+        size: 10,
         link: ""
     },
     {
@@ -46,7 +46,7 @@ data = [
         au: 0.7,
         moons: 0,
         img: "svg/2-venus.svg",
-        size: 20,
+        size: 17,
         link: ""
     },
     {
@@ -67,7 +67,7 @@ data = [
         au: 1.5,
         moons: 2,
         img: "svg/4-mars.svg",
-        size: 20,
+        size: 13,
         link: ""
     },
     {
@@ -77,7 +77,7 @@ data = [
         orbital_period: 0,
         au: 2.7,
         moons: 0,
-        img: "",
+        img: "https://via.placeholder.com/350x350?text=Asteroid Belt",
         size: 20,
         link: "",
         no_orbit: true,
@@ -105,7 +105,7 @@ data = [
         au: 5.2,
         moons: 79,
         img: "svg/5-jupiter.svg",
-        size: 20,
+        size: 30,
         link: ""
     },
     {
@@ -116,7 +116,7 @@ data = [
         au: 9.5,
         moons: 82,
         img: "svg/6-saturn.svg",
-        size: 20,
+        size: 25,
         link: ""
     },
     {
@@ -127,7 +127,7 @@ data = [
         au: 19.2,
         moons: 27,
         img: "svg/7-uranus.svg",
-        size: 20,
+        size: 24,
         link: ""
     },
     {
@@ -138,7 +138,7 @@ data = [
         au: 30.1,
         moons: 14,
         img: "svg/8-neptune.svg",
-        size: 20,
+        size: 22,
         link: ""
     }
 ]
