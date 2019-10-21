@@ -116,7 +116,7 @@ data = [
         au: 9.5,
         moons: 82,
         img: "svg/6-saturn.svg",
-        size: 25,
+        size: 40,
         link: ""
     },
     {
@@ -127,7 +127,7 @@ data = [
         au: 19.2,
         moons: 27,
         img: "svg/7-uranus.svg",
-        size: 24,
+        size: 26,
         link: ""
     },
     {
