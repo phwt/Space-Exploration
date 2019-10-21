@@ -71,7 +71,7 @@ function updateSection() {
 
     if (section == 0)
         $("#overlay-l, #overlay-r").stop().fadeOut()
-    else if (section == 1)
+    else
         $("#overlay-r").fadeIn()
 
     if (section != currentSection) {
