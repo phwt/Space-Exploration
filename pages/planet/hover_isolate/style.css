@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
+
+body {
+    font-family: 'Kanit';
+    font-weight: 200;
+}
+
+.files{
+    position: absolute;
+    bottom:0;
+    left: 4vw;
+    background: lightgoldenrodyellow;
+    width: 20vw;
+    height: 9vw;
+    transition: height 0.2s ease-out;
+}
+
+.files:hover{
+    cursor: pointer;
+    height: 12vw;
+    transition: height 0.2s ease-in;
+}
+
+.wrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper > h2{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
