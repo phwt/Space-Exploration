@@ -49,42 +49,32 @@ div.back:hover .triangle{
     height: calc(100% - 3em - 2rem - 3rem);
 }
 
-/* div#home {
-    margin: 2%;
-    display: block;
-    width: 7%;
-    height: 5%;
-    background-color: rgb(104, 187, 148);
-    text-align: center;
-    font-size: 20px;
-    color: aliceblue;
-} */
-/* div.row {
-    height: 20%;
+.triangle-nav{
+    color: white;
+    font-size: 3em;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .2s;
 }
 
-div.row.align-items-end {
-    height: 80%;
-
+.triangle-nav:hover{
+    cursor: pointer;
 }
 
-.triangle1 {
-    width: 0px;
-    height: 0px;
-    border-top: 50px solid transparent;
-    border-right: 50px solid aquamarine;
-    border-bottom: 50px solid transparent;
-    margin-bottom: 300%;
-    margin-left: 20%;
+.triangle-nav.left:hover{
+    margin-left: -10%;
 }
 
-.triangle2 {
-    width: 0px;
-    height: 0px;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 50px solid aquamarine;
-    margin-bottom: 300%;
-    margin-left: 20%;
+.triangle-nav.right:hover{
+    margin-right: -10%;
+}
 
-} */
+.file-side{
+    transition: .2s;
+}
+
+.file-side:hover{
+    cursor: pointer;
+    margin-top: -1%;
+}
