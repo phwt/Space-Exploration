@@ -8,107 +8,44 @@
     <link rel="stylesheet" href="../home/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="home">กลับไป</div>
-
-    <span id="slide_box_sp" class="left">
-        <div class="content_slide">
-            <div id="content_slide_in">
-                <a href="#" class="list_nav"> ข้อความ 1</a>
-                <a href="#" class="list_nav"> ข้อความ 2</a>
-                <a href="#" class="list_nav"> ข้อความ 3</a>
-                <a href="#" class="list_nav"> ข้อความ 4</a>
-                <a href="#" class="list_nav"> ข้อความ 5</a>
-                <a href="#" class="list_nav"> ข้อความ 6</a>
-                <a href="#" class="list_nav"> ข้อความ 7</a>
-                <a href="#" class="list_nav"> ข้อความ 8</a>
-            </div>
+    <!-- <div class="container"> -->
+    <div class="row">
+        <div class="col-lg-12">
         </div>
-    </span>
-
-    <span id="slide_box_sp" class="mid">
-        <div class="go_l_nav" title="Back"></div>
-        <div class="content_slide">
-            <div id="content_slide_in">
-                <a href="#" class="list_nav"> ข้อความ 2</a>
-                <a href="#" class="list_nav"> ข้อความ 3</a>
-                <a href="#" class="list_nav"> ข้อความ 4</a>
-                <a href="#" class="list_nav"> ข้อความ 5</a>
-                <a href="#" class="list_nav"> ข้อความ 6</a>
-                <a href="#" class="list_nav"> ข้อความ 7</a>
-                <a href="#" class="list_nav"> ข้อความ 8</a>
-            </div>
+    </div>
+    <div class="row align-items-end">
+        <div class="col-lg-3" id="box1">
+            <div style="background-color:rgb(239, 235, 213);width:100%;height: 100%"></div>
         </div>
-        <div class="go_r_nav" title="Next"></div>
-    </span>
-
-    <span id="slide_box_sp">
-        <div class="content_slide">
-            <div id="content_slide_in">
-                <a href="#" class="list_nav"> ข้อความ 3</a>
-                <a href="#" class="list_nav"> ข้อความ 4</a>
-                <a href="#" class="list_nav"> ข้อความ 5</a>
-                <a href="#" class="list_nav"> ข้อความ 6</a>
-                <a href="#" class="list_nav"> ข้อความ 7</a>
-                <a href="#" class="list_nav"> ข้อความ 8</a>
-            </div>
+        <div class="col-lg-1" id="box2">
+            <div class="triangle1" id="box2"></div>
         </div>
-    </span>
+        <div class="col-lg-4" id="box3">
+            <div style="background-color:rgb(239, 235, 213);width:100%;height: 100%"></div>
+        </div>
+        <div class="col-lg-1" id="box4">
+            <div class="triangle2" id="box4"></div>
+        </div>
+        <div class="col-lg-3" id="box5">
+            <div style="background-color:rgb(239, 235, 213);width:100%;height: 100%"></div>
+        </div>
+    </div>
+    <!-- </div> -->
 
 </body>
-
-
-<script type="text/javascript">
-    $(function () {
-
-        var box_w = 370;  // กำหนดความกว้างของแต่ละ box
-        var box_h = 370;  // กำหนดความสูงของ slide
-        var box_show = 1;  // กำหนดจำนวนรายการที่จะแสดงเริ่มต้น
-        var nav_w = 30;   // กำหนดความกว้างของตัวเลื่อยนซ้าย ขวา
-        var marGL = 2;     // กำหนดระยะห่างของแต่ละ box 
-        var box_rl = 170; //กำหนดระยะความสูงของตัวเลื่อยนซ้าย ขวา
-
-
-        var slide_w = (box_show * (marGL + box_w)) + (nav_w * 2) + marGL
-        var content_w = (box_show * (marGL + box_w));
-        var nol_nav_l, new_nev_l = null;
-        $("span#slide_box_sp").width(slide_w);
-        $("a.list_nav").width(box_w).css("marginLeft", marGL);
-        $("span#slide_box_sp,span#slide_box_sp *").height(box_h);
-        $("div.go_l_nav,div.go_r_nav").width(nav_w);
-        $("div.go_l_nav,div.go_r_nav").height(30).css("marginTop", box_rl);
-        $("div.go_r_nav").css("marginLeft", marGL);
-        $("div.content_slide").width(content_w);
-        $("div#content_slide_in").css("marginLeft", "0px");
-        $("div.go_r_nav").click(function () {
-            var numA = $("div#content_slide_in > a").length - box_show;
-            numA = numA * (box_w + marGL);
-            var charA = "-" + numA + "px";
-            now_nav_l = $("div#content_slide_in").css("marginLeft");
-            if (now_nav_l != charA) {
-                now_nav_l = now_nav_l.replace("px", "");
-                new_nav_l = now_nav_l - box_w - marGL;
-                $("div#content_slide_in").animate({
-                    marginLeft: new_nav_l
-                }, 100);
-            }
-        });
-        $("div.go_l_nav").click(function () {
-            now_nav_l = $("div#content_slide_in").css("marginLeft");
-            if (now_nav_l != "0px") {
-                now_nav_l = now_nav_l.replace("px", "");
-                now_nav_l = parseInt(now_nav_l);
-                new_nav_l = now_nav_l + box_w + marGL;
-                $("div#content_slide_in").animate({
-                    marginLeft: new_nav_l
-                }, 100);
-            }
-        });
-    });
-</script>
 
 </html>
