@@ -48,11 +48,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 }
 
 .files{
     position: absolute;
-    bottom: 0;
     left: 4vw;
     background: lightgoldenrodyellow;
     width: 20vw;
@@ -121,5 +121,31 @@ div.info{
 #heading-en{
     font-size: 32px;
     font-weight: 200;
-    line-height: 32px;
+    line-height: 32px ; 
 }
+
+
+
+
+@media screen and (max-width: 1440px) {
+    .planet-img{
+        height: 60% ;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .planet-img{
+        height: 50%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .planet-img{
+        height: 40%;
+    }
+
+}
+
+
