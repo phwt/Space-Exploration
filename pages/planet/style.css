@@ -5,13 +5,13 @@ body {
     font-family: 'Kanit';
     font-weight: 200;
 
-    -webkit-user-select: none;
+    /* -webkit-user-select: none; */
     /* Safari */
-    -moz-user-select: none;
+    /* -moz-user-select: none; */
     /* Firefox */
-    -ms-user-select: none;
+    /* -ms-user-select: none; */
     /* IE10+/Edge */
-    user-select: none;
+    /* user-select: none; */
     /* Standard */
 }
 
@@ -141,4 +141,47 @@ div.info {
     .planet-img {
         height: 40%;
     }
+} */
+
+/* For testing purpose only */
+
+.mock-moon {
+    background: lightgray;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 16%;
+    left: 61%;
+    z-index: 5;
+}
+
+/* .mock-poi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+} */
+
+.mock-poi-point {
+    background: lightgray;
+    border: 2px solid black;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 5;
+}
+
+/* .mock-poi > .text{
+    font-size: 1em;
+    line-height: 1em;
+}
+
+.poi-wrapper{
+    position: relative;
 } */
