@@ -1,5 +1,4 @@
 .a {
-    width: 1%;
     height: 3%;
     position: absolute;
     left: 43%;
@@ -7,7 +6,6 @@
 }
 
 .b {
-    width: 1%;
     height: 3%;
     position: absolute;
     left: 45%;
@@ -15,7 +13,6 @@
 }
 
 .c {
-    width: 1%;
     height: 3%;
     position: absolute;
     left: 60%;
