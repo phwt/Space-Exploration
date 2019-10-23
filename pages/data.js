@@ -6,7 +6,7 @@ data = [
         orbital_period: 0,
         au: 0,
         moons: 0,
-        img: "svg/0-sun.svg",
+        img: "img/0-sun.svg",
         size: 100,
         link: "",
         glow: true,
@@ -34,7 +34,7 @@ data = [
         orbital_period: 87,
         au: 0.4,
         moons: 0,
-        img: "svg/1-mercury.svg",
+        img: "img/1-mercury.svg",
         size: 10,
         link: ""
     },
@@ -45,7 +45,7 @@ data = [
         orbital_period: 224,
         au: 0.7,
         moons: 0,
-        img: "svg/2-venus.svg",
+        img: "img/2-venus.svg",
         size: 17,
         link: ""
     },
@@ -56,7 +56,7 @@ data = [
         orbital_period: 365,
         au: 1,
         moons: 1,
-        img: "svg/3-earth.svg",
+        img: "img/3-earth.svg",
         size: 20,
         link: ""
     }, {
@@ -66,7 +66,7 @@ data = [
         orbital_period: 686,
         au: 1.5,
         moons: 2,
-        img: "svg/4-mars.svg",
+        img: "img/4-mars.svg",
         size: 13,
         link: ""
     },
@@ -104,7 +104,7 @@ data = [
         orbital_period: 4332,
         au: 5.2,
         moons: 79,
-        img: "svg/5-jupiter.svg",
+        img: "img/5-jupiter.svg",
         size: 30,
         link: ""
     },
@@ -115,7 +115,7 @@ data = [
         orbital_period: 10759,
         au: 9.5,
         moons: 82,
-        img: "svg/6-saturn.svg",
+        img: "img/6-saturn.svg",
         size: 40,
         link: ""
     },
@@ -126,7 +126,7 @@ data = [
         orbital_period: 30688,
         au: 19.2,
         moons: 27,
-        img: "svg/7-uranus.svg",
+        img: "img/7-uranus.svg",
         size: 26,
         link: ""
     },
@@ -137,7 +137,7 @@ data = [
         orbital_period: 60182,
         au: 30.1,
         moons: 14,
-        img: "svg/8-neptune.svg",
+        img: "img/8-neptune.svg",
         size: 22,
         link: ""
     }

@@ -7,7 +7,7 @@ body {
 
     background-image:
         linear-gradient(to bottom, rgba(75, 81, 127, .5), rgba(26, 32, 46, .5)),
-        url(stars-1080.jpg);
+        url(img/stars-1080.jpg);
 
     font-family: 'Kanit';
     font-weight: 200;
@@ -168,7 +168,7 @@ hr {
 }
 
 .h-100.section {
-    background: url(svg/orbit.svg);
+    background: url(img/orbit.svg);
     background-repeat: no-repeat;
     background-position: center;
     shape-rendering: auto;
