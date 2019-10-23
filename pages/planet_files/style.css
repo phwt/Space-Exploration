@@ -1,9 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
+
 body {
     background-image: url(../img/stars-1080.jpg);
+
+    font-family: 'Kanit';
+    font-weight: 200;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
 }
 
-div#home {
-    /* position: contain; */
+div.back{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 4vw;
+    padding-top: 3em;
+}
+
+div.back > h2{
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.triangle{
+    transition: .2s;
+}
+
+div.back:hover .triangle{
+    margin-left: -15%;
+}
+
+.row.paper{
+    margin-top: calc(3em + 2rem);
+}
+
+.bg-file{
+    background: lightgoldenrodyellow;
+}
+
+.h-custom{
+    height: calc(100% - 3em - 2rem - 3rem);
+}
+
+/* div#home {
     margin: 2%;
     display: block;
     width: 7%;
@@ -12,8 +58,8 @@ div#home {
     text-align: center;
     font-size: 20px;
     color: aliceblue;
-}
-div.row {
+} */
+/* div.row {
     height: 20%;
 }
 
@@ -24,27 +70,21 @@ div.row.align-items-end {
 
 .triangle1 {
     width: 0px;
-
     height: 0px;
-
     border-top: 50px solid transparent;
     border-right: 50px solid aquamarine;
     border-bottom: 50px solid transparent;
-
     margin-bottom: 300%;
     margin-left: 20%;
 }
 
 .triangle2 {
     width: 0px;
-
     height: 0px;
-
     border-top: 50px solid transparent;
-
     border-bottom: 50px solid transparent;
     border-left: 50px solid aquamarine;
     margin-bottom: 300%;
     margin-left: 20%;
 
-}
+} */
