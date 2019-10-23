@@ -1,0 +1,39 @@
+.a {
+    width: 1%;
+    height: 3%;
+    position: absolute;
+    left: 43%;
+    top: 40%;
+}
+
+.b {
+    width: 1%;
+    height: 3%;
+    position: absolute;
+    left: 45%;
+    top: 60%;
+}
+
+.c {
+    width: 1%;
+    height: 3%;
+    position: absolute;
+    left: 60%;
+    top: 67%;
+}
+
+.img-fluid {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+
+}
+
+.container-fluid {
+    background-image: url('img/bg.jpg');
+}
+
+div {
+    color: whitesmoke;
+}
