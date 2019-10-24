@@ -6,7 +6,7 @@ data = [
         orbital_period: 0,
         au: 0,
         moons: 0,
-        img: "img/0-sun.svg",
+        img: "/Space-Exploration/pages/img/0-sun.svg",
         size: 100,
         link: 0,
         glow: true,
@@ -34,7 +34,7 @@ data = [
         orbital_period: 87,
         au: 0.4,
         moons: 0,
-        img: "img/1-mercury.svg",
+        img: "/Space-Exploration/pages/img/1-mercury.svg",
         size: 10,
         link: 1
     },
@@ -45,7 +45,7 @@ data = [
         orbital_period: 224,
         au: 0.7,
         moons: 0,
-        img: "img/2-venus.svg",
+        img: "/Space-Exploration/pages/img/2-venus.svg",
         size: 17,
         link: 2
     },
@@ -56,7 +56,7 @@ data = [
         orbital_period: 365,
         au: 1,
         moons: 1,
-        img: "img/3-earth.svg",
+        img: "/Space-Exploration/pages/img/3-earth.svg",
         size: 20,
         link: 3,
         poi: [
@@ -93,7 +93,7 @@ data = [
         orbital_period: 686,
         au: 1.5,
         moons: 2,
-        img: "img/4-mars.svg",
+        img: "/Space-Exploration/pages/img/4-mars.svg",
         size: 13,
         link: 4
     },
@@ -104,7 +104,7 @@ data = [
         orbital_period: 0,
         au: 2.7,
         moons: 0,
-        img: "https://via.placeholder.com/350x350?text=Asteroid Belt",
+        img: "/Space-Exploration/pages/https://via.placeholder.com/350x350?text=Asteroid Belt",
         size: 20,
         link: 5,
         no_orbit: true,
@@ -131,7 +131,7 @@ data = [
         orbital_period: 4332,
         au: 5.2,
         moons: 79,
-        img: "img/5-jupiter.svg",
+        img: "/Space-Exploration/pages/img/5-jupiter.svg",
         size: 30,
         link: 6
     },
@@ -142,7 +142,7 @@ data = [
         orbital_period: 10759,
         au: 9.5,
         moons: 82,
-        img: "img/6-saturn.svg",
+        img: "/Space-Exploration/pages/img/6-saturn.svg",
         size: 40,
         link: 7
     },
@@ -153,7 +153,7 @@ data = [
         orbital_period: 30688,
         au: 19.2,
         moons: 27,
-        img: "img/7-uranus.svg",
+        img: "/Space-Exploration/pages/img/7-uranus.svg",
         size: 26,
         link: 8
     },
@@ -164,7 +164,7 @@ data = [
         orbital_period: 60182,
         au: 30.1,
         moons: 14,
-        img: "img/8-neptune.svg",
+        img: "/Space-Exploration/pages/img/8-neptune.svg",
         size: 22,
         link: 9
     }
