@@ -1,5 +1,5 @@
 // Need to be changed dynamically with PHP later.
-let current_page = 3;
+// let current_page = 3;
 
 $(document).ready(function () {
 

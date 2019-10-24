@@ -1,5 +1,8 @@
 <html lang="en">
-
+<?php
+$cur_page = $_GET["p"];
+echo "<script>let current_page = $cur_page;</script>"
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
