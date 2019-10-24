@@ -1,6 +1,7 @@
 data = [
     {
         name: "ดวงอาทิตย์",
+        name_en: "Sun",
         type: "ดาวฤกษ์",
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 0,
@@ -29,6 +30,7 @@ data = [
     },
     {
         name: "ดาวพุธ",
+        name_en: "ดาวพุธ",
         type: "ดาวเคราะห์หิน (Terrestrial Planet)",
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 87,
@@ -40,6 +42,7 @@ data = [
     },
     {
         name: "ดาวศุกร์",
+        name_en: "ดาวศุกร์",
         type: "ดาวเคราะห์หิน (Terrestrial Planet)",
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 224,
@@ -51,6 +54,7 @@ data = [
     },
     {
         name: "โลก",
+        name_en: "Earth",
         type: "ดาวเคราะห์หิน (Terrestrial Planet)",
         details: "ดาวเคราะห์ลำดับที่สามจากดวงอาทิตย์ และเป็นวัตถุทางดาราศาสตร์เพียงหนึ่งเดียวที่ทราบว่ามีสิ่งมีชีวิต ร้อยละ 71 ของพื้นผิวโลกปกคลุมด้วยน้ำซึ่งส่วนใหญ่เป็นมหาสมุทร อีกร้อยละ 29 ที่เหลือเป็นแผ่นดิน",
         orbital_period: 365,
@@ -88,6 +92,7 @@ data = [
         ]
     }, {
         name: "ดาวอังคาร",
+        name_en: "ดาวอังคาร",
         type: "ดาวเคราะห์หิน (Terrestrial Planet)",
         details: "ดาวเคราะห์ลำดับที่สี่จากดวงอาทิตย์ เป็นดาวเคราะห์เล็กที่สุดอันดับที่สองในระบบสุริยะรองจากดาวพุธ เป็นดาวเคราะห์หินที่มีบรรยากาศเบาบาง มีลักษณะพื้นผิวคล้ายคลึงกับทั้งหลุมอุกกาบาตบนดวงจันทร์ และภูเขาไฟ ทะเลทราย ตลอดจนน้ำแข็งขั้วดาวที่ปรากฏบนโลก",
         orbital_period: 686,
@@ -99,12 +104,13 @@ data = [
     },
     {
         name: "แถบดาวเคราะห์น้อย",
+        name_en: "แถบดาวเคราะห์น้อย",
         type: "แถบดาวเคราะห์น้อย",
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 0,
         au: 2.7,
         moons: 0,
-        img: "/Space-Exploration/pages/https://via.placeholder.com/350x350?text=Asteroid Belt",
+        img: "https://via.placeholder.com/350x350?text=Asteroid Belt",
         size: 20,
         link: 5,
         no_orbit: true,
@@ -126,6 +132,7 @@ data = [
     },
     {
         name: "ดาวพฤหัสบดี",
+        name_en: "ดาวพฤหัสบดี",
         type: "ดาวแก๊สยักษ์ (Gas Giant)",
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 4332,
@@ -137,6 +144,7 @@ data = [
     },
     {
         name: "ดาวเสาร์",
+        name_en: "ดาวเสาร์",
         type: "ดาวแก๊สยักษ์ (Gas Giant)",
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 10759,
@@ -148,6 +156,7 @@ data = [
     },
     {
         name: "ดาวยูเรนัส",
+        name_en: "ดาวยูเรนัส",
         type: "ดาวแก๊สยักษ์ (Gas Giant)",
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 30688,
@@ -159,6 +168,7 @@ data = [
     },
     {
         name: "ดาวเนปจูน",
+        name_en: "ดาวเนปจูน",
         type: "ดาวแก๊สยักษ์ (Gas Giant)",
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
         orbital_period: 60182,
