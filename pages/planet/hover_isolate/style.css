@@ -6,27 +6,29 @@ body {
 }
 
 
-.files, .files2, .files3{
+.files,
+.files2,
+.files3 {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 4vw;
     background: lightgoldenrodyellow;
     width: 20vw;
     height: 9vw;
-    transition: height 0.2s ease-out;
-    border: black solid 1px;
+    transition: 0.2s ease-out;
+    border: 1px solid rgba(0, 0, 0, .2);
 }
 
 
 
-.contain{
+.contain {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 4vw;
     background: none;
     width: 20vw;
     height: 9vw;
-    transition: height 0.2s ease-out;
+    transition: 0.2s ease-out;
 }
 
 
@@ -36,32 +38,32 @@ body {
     transition: height 0.2s ease-in;
 } */
 
-.contain:hover .files{
-    cursor:pointer;
-    height:12vw;
+.contain:hover .files {
+    cursor: pointer;
+    height: 12vw;
 }
 
-.contain:hover .files2{
+.contain:hover .files2 {
     cursor: pointer;
     transform: rotate(20deg);
     left: 15vh;
-    top:10px;
+    top: 10px;
 }
 
-.contain:hover .files3{
+.contain:hover .files3 {
     cursor: pointer;
     transform: rotate(-10deg);
     height: 16vw;
     left: -2vh;
 }
 
-.wrapper{
+.wrapper {
     position: relative;
     height: 100%;
     width: 100%;
 }
 
-.wrapper > h2{
+.wrapper>h2 {
     position: absolute;
     top: 15%;
     left: 50%;
