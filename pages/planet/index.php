@@ -29,9 +29,9 @@ echo "<script>let current_page = $cur_page;</script>"
         <div class="poi-point mock-pos-1" poi-id="1"></div>
         <div class="poi-point mock-pos-2" poi-id="2"></div> -->
 
-        <img src="../img/3-earth.svg" style="height: 50%" class="planet-img">
+        <img src="" style="height: 50%" class="planet-img">
 
-        <div class="back">
+        <div class="back" onclick="window.history.back()">
             <h2><span class="triangle">◀&#xFE0E;</span> กลับ</h2>
         </div>
 
@@ -42,8 +42,8 @@ echo "<script>let current_page = $cur_page;</script>"
         </div>
 
         <div class="info text-right">
-            <span id="heading-th">โลก</span>
-            <span id="heading-en">Earth</span>
+            <span id="heading-th"></span>
+            <span id="heading-en"></span>
         </div>
 
         <div class="row text-white" id="overlay">
