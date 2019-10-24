@@ -58,7 +58,34 @@ data = [
         moons: 1,
         img: "img/3-earth.svg",
         size: 20,
-        link: ""
+        link: "",
+        poi: [
+            {
+                id: 0,
+                x: 48,
+                y: 59,
+                title: "สถานีอวกาศนานาชาติ",
+                title_en: "International Space Station",
+                desc: "สถานีอวกาศนานาชาติสถานีอวกาศนานาชาติสถานีอวกาศนานาชาติ",
+                image: "../img/planet/iss.jpg",
+            },{
+                id: 1,
+                x: 56,
+                y: 39,
+                title: "ยาน Soyuz",
+                title_en: "Soyuz",
+                desc: "Soyuz ไม่ใช่ Progress",
+                image: "../img/planet/iss2.jpg",
+            },{
+                id: 2,
+                x: 45,
+                y: 34,
+                title: "กล้องโทรทรรศน์ฮับเบิล",
+                title_en: "HST",
+                desc: "กล้องกล้อง",
+                image: "../img/planet/hst.jpg",
+            }
+        ]
     }, {
         name: "ดาวอังคาร",
         type: "ดาวเคราะห์หิน (Terrestrial Planet)",

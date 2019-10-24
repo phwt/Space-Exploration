@@ -5,13 +5,13 @@ body {
     font-family: 'Kanit';
     font-weight: 200;
 
-    /* -webkit-user-select: none; */
+    -webkit-user-select: none;
     /* Safari */
-    /* -moz-user-select: none; */
+    -moz-user-select: none;
     /* Firefox */
-    /* -ms-user-select: none; */
+    -ms-user-select: none;
     /* IE10+/Edge */
-    /* user-select: none; */
+    user-select: none;
     /* Standard */
 }
 
@@ -54,7 +54,7 @@ body {
 .files {
     position: absolute;
     bottom: 0;
-    left: 4vw;
+    right: 4vw;
     background: lightgoldenrodyellow;
     width: 20vw;
     height: 9vw;
@@ -164,24 +164,94 @@ div.info {
     z-index: 5;
 } */
 
-.mock-poi-point {
-    background: lightgray;
-    border: 2px solid black;
+.poi-point {
+    background: white;
+    border: 1px solid black;
     width: 1vw;
     height: 1vw;
     border-radius: 100%;
-
-    position: absolute;
-    top: 10%;
-    left: 50%;
     z-index: 5;
+    transition: .2s;
+    position: absolute;
 }
 
-/* .mock-poi > .text{
-    font-size: 1em;
-    line-height: 1em;
+.mock-pos-0{
+    top: 59%;
+    left: 48%;
 }
 
-.poi-wrapper{
-    position: relative;
-} */
+.mock-pos-1{
+    position: absolute;
+    top: 39%;
+    left: 56%;
+}
+
+.mock-pos-2{
+    position: absolute;
+    top: 34%;
+    left: 45%;
+}
+
+.poi-point:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+
+.poi-point:active{
+    opacity: 1;
+}
+
+.overlay-box {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1em;
+    transition: height 0.5s;
+}
+
+.overlay-box.readmore {
+    border-top: 0;
+    transition: .2s;
+}
+
+.overlay-box.readmore:hover,
+.btn-space:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.overlay-box.readmore:active,
+.btn-space:active {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#overlay {
+    position: absolute;
+    top: 50%;
+    /* bottom: 50%; */
+    left: 3vw;
+    /* left: calc(3vw + 22vw + 50vw); */
+    width: 22vw;
+    transform: translateY(-50%);
+}
+
+#box-detail > img{
+    width: 100%;
+}
+
+.spacing {
+    height: 1em;
+    width: 100%;
+}
+
+.spacing.line {
+    height: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: .5em 0 .5em 0;
+}
+
+.spacing.line-narrow {
+    height: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: .25em 0 .25em 0;
+}
