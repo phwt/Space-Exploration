@@ -114,7 +114,8 @@ $(document).ready(function () {
     })
 
     $(".overlay-box.readmore").click(() => {
-        alert("you clicked " + data[getSection() - 1].name)
+        window.location = "planet?p=" + data[getSection() - 1].link
+        // alert("you clicked " + data[getSection() - 1].name)
     })
 
     // Background parallax scrolling
@@ -133,7 +134,9 @@ $(document).ready(function () {
         $("#content-area").append('\
             <div class="h-100 '+ ((body.no_orbit) ? "" : "section") +'">\
             <div class="bodies" style="width: ' + body.size + '%">\
-                <a href="' + body.link + '"><img ' + ((body.glow) ? "class='glow'" : "") + ' src="' + body.img + '"></a>\
+                <a href="planet?p='+ body.link +'">\
+                    <img ' + ((body.glow) ? "class='glow'" : "") + ' src="' + body.img + '">\
+                </a>\
             </div>\
         </div>\
         ')

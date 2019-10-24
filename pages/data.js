@@ -8,7 +8,7 @@ data = [
         moons: 0,
         img: "img/0-sun.svg",
         size: 100,
-        link: "",
+        link: 0,
         glow: true,
         no_orbit: true,
         custom:[
@@ -36,7 +36,7 @@ data = [
         moons: 0,
         img: "img/1-mercury.svg",
         size: 10,
-        link: ""
+        link: 1
     },
     {
         name: "ดาวศุกร์",
@@ -47,7 +47,7 @@ data = [
         moons: 0,
         img: "img/2-venus.svg",
         size: 17,
-        link: ""
+        link: 2
     },
     {
         name: "โลก",
@@ -58,7 +58,7 @@ data = [
         moons: 1,
         img: "img/3-earth.svg",
         size: 20,
-        link: "",
+        link: 3,
         poi: [
             {
                 id: 0,
@@ -95,7 +95,7 @@ data = [
         moons: 2,
         img: "img/4-mars.svg",
         size: 13,
-        link: ""
+        link: 4
     },
     {
         name: "แถบดาวเคราะห์น้อย",
@@ -106,7 +106,7 @@ data = [
         moons: 0,
         img: "https://via.placeholder.com/350x350?text=Asteroid Belt",
         size: 20,
-        link: "",
+        link: 5,
         no_orbit: true,
         custom:[
             {
@@ -133,7 +133,7 @@ data = [
         moons: 79,
         img: "img/5-jupiter.svg",
         size: 30,
-        link: ""
+        link: 6
     },
     {
         name: "ดาวเสาร์",
@@ -144,7 +144,7 @@ data = [
         moons: 82,
         img: "img/6-saturn.svg",
         size: 40,
-        link: ""
+        link: 7
     },
     {
         name: "ดาวยูเรนัส",
@@ -155,7 +155,7 @@ data = [
         moons: 27,
         img: "img/7-uranus.svg",
         size: 26,
-        link: ""
+        link: 8
     },
     {
         name: "ดาวเนปจูน",
@@ -166,6 +166,6 @@ data = [
         moons: 14,
         img: "img/8-neptune.svg",
         size: 22,
-        link: ""
+        link: 9
     }
 ]
