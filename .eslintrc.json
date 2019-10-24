@@ -14,5 +14,8 @@
         "ecmaVersion": 2018
     },
     "rules": {
+        "require-jsdoc": "off",
+        "max-len": "off",
+        "no-throw-literal": "off"
     }
 }
