@@ -3,71 +3,43 @@ let getSection = () => Math.floor(($(document).scrollTop() + window.innerHeight 
 let getSectionMid = () => Math.floor($(document).scrollTop() / window.innerHeight)
 let getMidpoint = (section) => (section * window.innerHeight) + (window.innerHeight / 2)
 let numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+let calcPercent = (start, current) => ((current - start) / ((start + window.innerHeight) - start))
 
-function fadeChange(elem, content) {
-    $(elem).fadeOut(function () {
-        $(this).html(content).fadeIn()
-    })
-}
+let data;
+$.getJSON('data.json',function(datas){
+    console.log('success');
+    data = datas;
+});
 
 function setOverlay(data) {
 
-    field = [{
-        title: "ระยะเวลาการโคจร",
-        value: numberWithCommas(data.orbital_period),
-        unit: "วัน (โลก)"
-    }, {
-        title: "ระยะห่างจากดวงอาทิตย์",
-        value: data.au,
-        unit: "AU"
-    }, {
-        title: "จำนวนดาวบริวาร",
-        value: data.moons,
-        unit: "ดวง"
-    }]
-
-    if (data.custom != undefined) {
-        field = [{
-            title: data.custom[0].title,
-            value: data.custom[0].value,
-            unit: data.custom[0].unit
-        }, {
-            title: data.custom[1].title,
-            value: data.custom[1].value,
-            unit: data.custom[1].unit
-        }, {
-            title: data.custom[2].title,
-            value: data.custom[2].value,
-            unit: data.custom[2].unit
-        }]
-    }
-
-    $("#overlay-l").fadeOut(function () {
-        $("#overlay-name").html(data.name)
-        $("#overlay-type").html(data.type)
-        $("#overlay-details").html(data.details)
-        $("#overlay-field-1").html('<span class="font-weight-bold">' + field[0].title + '</span><span class="field-value">' + field[0].value + '</span>' + field[0].unit)
-        $("#overlay-field-2").html('<span class="font-weight-bold">' + field[1].title + '</span><span class="field-value">' + field[1].value + '</span>' + field[1].unit)
-        $("#overlay-field-3").html('<span class="font-weight-bold">' + field[2].title + '</span><span class="field-value">' + field[2].value + '</span>' + field[2].unit)
-    
-        $(this).fadeIn()
-    })
+    document.querySelector("#overlay-info").reloadField(
+        data.name,
+        data.type,
+        data.details,
+        data.link,
+        [
+            numberWithCommas(data.orbital_period),
+            data.au,
+            data.moons
+        ],
+        data.custom
+    );
 }
 
 function updateSection() {
     section = getSection()
-    $("#text-region").text((section > 4) ? "ระบบสุริยะชั้นนอก" : "ระบบสุริยะชั้นใน")
 
     try {
         scroll_percentage = calcPercent(getMidpoint(getSectionMid()), $(document).scrollTop() + window.innerHeight / 2)
         set_au = calcAU(getSectionMid())
         dist_au = scroll_percentage * (set_au.bottom - set_au.top) + set_au.top
-        $("#text-dist > .au").text(Math.floor(dist_au * 100) / 100)
-        $("#text-dist > .km").text(numberWithCommas(Math.floor(dist_au * 149597871)))
+        au = Math.floor(dist_au * 100) / 100;
     } catch (TypeError) {
-        $("#text-dist > .au").text(0)
-        $("#text-dist > .km").text(0)
+        au = 0;
     }
+
+    document.querySelector("#overlay-au").reloadField(((section > 4) ? "ระบบสุริยะชั้นนอก" : "ระบบสุริยะชั้นใน"), au);
 
     if (section == 0)
         $("#overlay-l, #overlay-r").stop().fadeOut()
@@ -96,10 +68,6 @@ function calcAU(section) {
     }
 }
 
-function calcPercent(start, current) {
-    return ((current - start) / ((start + window.innerHeight) - start))
-}
-
 $(document).ready(function () {
 
     $("#overlay-l, #overlay-r").hide()
@@ -115,30 +83,18 @@ $(document).ready(function () {
 
     $(".overlay-box.readmore").click(() => {
         window.location = "planet?p=" + data[getSection() - 1].link
-        // alert("you clicked " + data[getSection() - 1].name)
     })
 
-    // Background parallax scrolling
-    var parallax = document.querySelectorAll("body"),
-        speed = -0.05
-    window.onscroll = function () {
-        [].slice.call(parallax).forEach(function (el, i) {
-            var windowYOffset = window.pageYOffset,
-                elBackgrounPos = "50% " + (windowYOffset * speed) + "px"
-            el.style.backgroundPosition = elBackgrounPos
-        })
-    }
 
-    // Propagate data onto page
-    for (body of data) {
-        $("#content-area").append('\
-            <div class="h-100 '+ ((body.no_orbit) ? "" : "section") +'">\
-            <div class="bodies" style="width: ' + body.size + '%">\
-                <a href="planet?p='+ body.link +'">\
-                    <img ' + ((body.glow) ? "class='glow'" : "") + ' src="' + body.img + '">\
-                </a>\
-            </div>\
-        </div>\
-        ')
-    }
+    // Temporary disable
+    // Background parallax scrolling
+    // var parallax = document.querySelectorAll("body"),
+    //     speed = -0.05
+    // window.onscroll = function () {
+    //     [].slice.call(parallax).forEach(function (el, i) {
+    //         var windowYOffset = window.pageYOffset,
+    //             elBackgrounPos = "50% " + (windowYOffset * speed) + "px"
+    //         el.style.backgroundPosition = elBackgrounPos
+    //     })
+    // }
 })
