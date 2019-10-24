@@ -36,4 +36,9 @@ $(document).ready(function () {
     $(".readmore").click(function () {
         console.log("you clicked")
     })
+
+    $(".planet-img").attr("src", data[current_page].img)
+
+    $("#heading-th").text(data[current_page].name)
+    $("#heading-en").text(data[current_page].name_en)
 })
