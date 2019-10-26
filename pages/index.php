@@ -23,15 +23,13 @@
         <!-- <h2 class="text-white center-me">หน้าเปิด</h2> -->
     </div>
 
-    <span id="content-area text-white">
-        <?php
+    <span id="content-area text-white"><?php
         $json = file_get_contents("data.json");
         $data = json_decode($json);
         foreach ($data as $value) {
             echo "<celestial-bodies id='$value->link' size='$value->size' src='$value->img'></celestial-bodies>";
         }
-        ?>
-    </span>
+        ?></span>
 
     <overlay-info id="overlay-info"></overlay-info>
 
