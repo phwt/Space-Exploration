@@ -1,44 +1,42 @@
 // Need to be changed dynamically with PHP later.
 // let current_page = 3;
 
-$(document).ready(function () {
+$(document).ready(function() {
+  $(data[current_page].poi).each(function(index, value) {
+    // console.log(value)
+    $('#marker-here').append(`
+        <div class=\'poi-point\' style=\'left:'+ value.x + '%;top:' + value.y + '%\' poi-id=\''+ value.id +'\'></div>\
+    `);
+  });
 
-    $(data[current_page].poi).each(function(index, value){
-        // console.log(value)
-        $("#marker-here").append("\
-            <div class='poi-point' style='left:"+ value.x + "%;top:" + value.y + "%' poi-id='"+ value.id +"'></div>\
-        ")
-    })
+  // for(poi in data[current_page].poi){
+  //     console.log(data[current_page].poi)
+  //     console.log(poi)
+  //     $("#marker-here").append("\
+  //         <div class='poi-point' poi-id='"+ poi.id +"'></div>\
+  //     ")
+  // }
 
-    // for(poi in data[current_page].poi){
-    //     console.log(data[current_page].poi)
-    //     console.log(poi)
-    //     $("#marker-here").append("\
-    //         <div class='poi-point' poi-id='"+ poi.id +"'></div>\
-    //     ")
-    // }
+  $('#overlay').hide();
 
-    $("#overlay").hide()
+  $('.poi-point').click(function() {
+    poi_id = parseInt($(this).attr('poi-id'));
 
-    $(".poi-point").click(function () {
+    $('#overlay').fadeOut(function() {
+      $('#overlay-name').text(data[current_page].poi[poi_id].title);
+      $('#overlay-name-en').text(data[current_page].poi[poi_id].title_en);
+      $('#overlay-info').text(data[current_page].poi[poi_id].desc);
+      $('#overlay-img').attr('src', data[current_page].poi[poi_id].image);
+      $(this).fadeIn();
+    });
+  });
 
-        poi_id = parseInt($(this).attr("poi-id"))
+  $('.readmore').click(function() {
+    console.log('you clicked');
+  });
 
-        $("#overlay").fadeOut(function () {
-            $("#overlay-name").text(data[current_page].poi[poi_id].title)
-            $("#overlay-name-en").text(data[current_page].poi[poi_id].title_en)
-            $("#overlay-info").text(data[current_page].poi[poi_id].desc)
-            $("#overlay-img").attr("src", data[current_page].poi[poi_id].image)
-            $(this).fadeIn()
-        })
-    })
+  $('.planet-img').attr('src', data[current_page].img);
 
-    $(".readmore").click(function () {
-        console.log("you clicked")
-    })
-
-    $(".planet-img").attr("src", data[current_page].img)
-
-    $("#heading-th").text(data[current_page].name)
-    $("#heading-en").text(data[current_page].name_en)
-})
+//   $('#heading-th').text(data[current_page].name);
+//   $('#heading-en').text(data[current_page].name_en);
+});
