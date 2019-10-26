@@ -54,10 +54,6 @@ class OverlayInfo extends HTMLElement {
         `;
   }
 
-  test() {
-    alert();
-  }
-
   connectedCallback() {
     this.render();
   }
