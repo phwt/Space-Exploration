@@ -38,9 +38,9 @@ class OverlayInfo extends HTMLElement {
     return fieldElem;
   }
 
-  render(display) {
+  render() {
     this.innerHTML = `
-        <div class="row text-white" id="overlay-l"  ` + ((display) ? 'style="display: none"' : '') + `>
+        <div class="row text-white" id="overlay-l" style="display: none">
             <div class="col-12 text-center overlay-box bottom" id="box-detail">
                 <h2 class="mb-0">` + this.name + `</h2>
                 <span>` + this.type + `</span>
@@ -59,6 +59,7 @@ class OverlayInfo extends HTMLElement {
   }
 
   reloadField(name, type, detail, link, field, custom) {
+    this.timecalled = 0;
     this.name = name;
     this.type = type;
     this.detail = detail;
@@ -80,9 +81,17 @@ class OverlayInfo extends HTMLElement {
       });
     }
 
+    this.timecalled++;
+
+    if (this.timecalled == 1) {
+      this.render();
+      $(this).find('div').fadeIn();
+      return;
+    }
+
     const realThis = this;
     $(this).find('div').fadeOut(function() {
-      realThis.render(true);
+      realThis.render();
       $(realThis).find('div').fadeIn();
     });
   }
