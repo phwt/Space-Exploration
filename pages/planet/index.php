@@ -7,6 +7,8 @@ echo "<script>let current_page = $cur_page;</script>";
 $json = file_get_contents("../data.json");
 $data = json_decode($json)[$cur_page];
 
+echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
+
 ?>
 <head>
     <meta charset="UTF-8">
@@ -19,7 +21,6 @@ $data = json_decode($json)[$cur_page];
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-    <script src="../data.js"></script>
     <script src="elements.js"></script>
     <script src="script.js"></script>
 </head>

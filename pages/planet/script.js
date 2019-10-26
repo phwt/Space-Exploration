@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  // json = JSON.parse('../data.json');
+
   $('.poi-point').click(function() {
     poiID = parseInt($(this).attr('poi-id'));
     document.querySelectorAll('overlay-planet-info')[0].reloadField(
