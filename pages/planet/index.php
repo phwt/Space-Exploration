@@ -5,7 +5,7 @@ $cur_page = $_GET["p"];
 echo "<script>let current_page = $cur_page;</script>";
 
 $json = file_get_contents("../data.json");
-$data = json_decode($json);
+$data = json_decode($json)[$cur_page];
 
 ?>
 <head>
@@ -29,13 +29,16 @@ $data = json_decode($json);
 
         <div class="mock-moon text-center">Moon</div>
 
-        <span id="marker-here"></span>
-
-        <!-- <div class="poi-point mock-pos-0" poi-id="0"></div>
-        <div class="poi-point mock-pos-1" poi-id="1"></div>
-        <div class="poi-point mock-pos-2" poi-id="2"></div> -->
-
-        <img src="<?php echo $data[$cur_page]->img ?>" style="height: 50%" class="planet-img">
+        <div class="shadow">
+            <div class="img-wrapper" id="marker-here">
+                <img class="logo" src="planet_isolate/2-venus.png"/>
+                <?php
+                foreach($data->poi as $poi){
+                    echo "<div class='poi-point' style='left:$poi->x%;top:$poi->y%;' poi-id='$poi->id'></div>";
+                }
+                ?>
+            </div>
+        </div>
 
         <button-back></button-back>
 
@@ -46,8 +49,8 @@ $data = json_decode($json);
         </div>
 
         <heading-box
-            maintitle="<?php echo $data[$cur_page]->name ?>"
-            subtitle="<?php echo $data[$cur_page]->name_en ?>"
+            maintitle="<?php echo $data->name ?>"
+            subtitle="<?php echo $data->name_en ?>"
         ></heading-box>
 
         <overlay-planet-info></overlay-planet-info>
