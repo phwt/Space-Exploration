@@ -74,10 +74,9 @@ class OverlayPlanetInfo extends HTMLElement {
       return;
     }
 
-    const realThis = this;
-    $(this).find('div').fadeOut(function() {
-      realThis.render();
-      $(realThis).find('div').fadeIn();
+    $(this).find('div').fadeOut(() => {
+      this.render();
+      $(this).find('div').fadeIn();
     });
   }
 }
