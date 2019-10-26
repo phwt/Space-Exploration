@@ -25,6 +25,12 @@ class OverlayInfo extends HTMLElement {
     ];
   }
 
+  setReadmoreEvent() {
+    this.querySelector('.readmore').addEventListener('click', () => {
+      window.location.assign('planet?p=' + this.link);
+    });
+  }
+
   getFields() {
     let fieldElem = '';
 
@@ -49,9 +55,10 @@ class OverlayInfo extends HTMLElement {
                 <div class="spacing line"></div>
                 <div class="row row-info">` + this.getFields() + `</div>
             </div>
-            <div class="col-12 overlay-box readmore text-center" onclick="window.location.assign('planet?p=` + this.link + `')"> อ่านเพิ่มเติม &gt; </div>
+            <div class="col-12 overlay-box readmore text-center"> อ่านเพิ่มเติม &gt; </div>
         </div>
         `;
+    this.setReadmoreEvent();
   }
 
   connectedCallback() {
@@ -89,10 +96,9 @@ class OverlayInfo extends HTMLElement {
       return;
     }
 
-    const realThis = this;
-    $(this).find('div').fadeOut(function() {
-      realThis.render();
-      $(realThis).find('div').fadeIn();
+    $(this).find('div').fadeOut(() => {
+      this.render();
+      $(this).find('div').fadeIn();
     });
   }
 }
