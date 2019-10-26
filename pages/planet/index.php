@@ -1,7 +1,12 @@
 <html lang="en">
 <?php
 $cur_page = $_GET["p"];
-echo "<script>let current_page = $cur_page;</script>"
+// Todo - eliminate this php to js usage
+echo "<script>let current_page = $cur_page;</script>";
+
+$json = file_get_contents("../data.json");
+$data = json_decode($json);
+
 ?>
 <head>
     <meta charset="UTF-8">
@@ -15,6 +20,7 @@ echo "<script>let current_page = $cur_page;</script>"
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
     <script src="../data.js"></script>
+    <script src="elements.js"></script>
     <script src="script.js"></script>
 </head>
 
@@ -29,11 +35,9 @@ echo "<script>let current_page = $cur_page;</script>"
         <div class="poi-point mock-pos-1" poi-id="1"></div>
         <div class="poi-point mock-pos-2" poi-id="2"></div> -->
 
-        <img src="" style="height: 50%" class="planet-img">
+        <img src="<?php echo $data[$cur_page]->img ?>" style="height: 50%" class="planet-img">
 
-        <div class="back" onclick="window.history.back()">
-            <h2><span class="triangle">◀&#xFE0E;</span> กลับ</h2>
-        </div>
+        <button-back></button-back>
 
         <div class="files">
             <div class="wrapper">
@@ -41,12 +45,13 @@ echo "<script>let current_page = $cur_page;</script>"
             </div>
         </div>
 
-        <div class="info text-right">
-            <span id="heading-th"></span>
-            <span id="heading-en"></span>
-        </div>
+        <heading-box
+            maintitle="<?php echo $data[$cur_page]->name ?>"
+            subtitle="<?php echo $data[$cur_page]->name_en ?>"
+        ></heading-box>
 
-        <div class="row text-white" id="overlay">
+        <overlay-planet-info></overlay-planet-info>
+        <!-- <div class="row text-white" id="overlay">
             <div class="col-12 text-center overlay-box" id="box-detail">
                 <h2 class="mb-0" id="overlay-name"></h2>
                 <span id="overlay-name-en"></span>
@@ -57,7 +62,7 @@ echo "<script>let current_page = $cur_page;</script>"
                 <div id="overlay-info"></div>
             </div>
             <div class="col-12 overlay-box readmore text-center"> อ่านเพิ่มเติม &gt; </div>
-        </div>
+        </div> -->
 
     </div>
 </body>

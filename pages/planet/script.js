@@ -5,38 +5,17 @@ $(document).ready(function() {
   $(data[current_page].poi).each(function(index, value) {
     // console.log(value)
     $('#marker-here').append(`
-        <div class=\'poi-point\' style=\'left:'+ value.x + '%;top:' + value.y + '%\' poi-id=\''+ value.id +'\'></div>\
+        <div class='poi-point' style='left:`+ value.x + `%;top:` + value.y + `%;' poi-id='`+ value.id +`'></div>
     `);
   });
 
-  // for(poi in data[current_page].poi){
-  //     console.log(data[current_page].poi)
-  //     console.log(poi)
-  //     $("#marker-here").append("\
-  //         <div class='poi-point' poi-id='"+ poi.id +"'></div>\
-  //     ")
-  // }
-
-  $('#overlay').hide();
-
   $('.poi-point').click(function() {
-    poi_id = parseInt($(this).attr('poi-id'));
-
-    $('#overlay').fadeOut(function() {
-      $('#overlay-name').text(data[current_page].poi[poi_id].title);
-      $('#overlay-name-en').text(data[current_page].poi[poi_id].title_en);
-      $('#overlay-info').text(data[current_page].poi[poi_id].desc);
-      $('#overlay-img').attr('src', data[current_page].poi[poi_id].image);
-      $(this).fadeIn();
-    });
+    poiID = parseInt($(this).attr('poi-id'));
+    document.querySelectorAll('overlay-planet-info')[0].reloadField(
+        data[current_page].poi[poiID].title,
+        data[current_page].poi[poiID].title_en,
+        data[current_page].poi[poiID].desc,
+        data[current_page].poi[poiID].image
+    );
   });
-
-  $('.readmore').click(function() {
-    console.log('you clicked');
-  });
-
-  $('.planet-img').attr('src', data[current_page].img);
-
-//   $('#heading-th').text(data[current_page].name);
-//   $('#heading-en').text(data[current_page].name_en);
 });
