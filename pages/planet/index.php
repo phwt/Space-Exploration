@@ -51,19 +51,6 @@ $data = json_decode($json);
         ></heading-box>
 
         <overlay-planet-info></overlay-planet-info>
-        <!-- <div class="row text-white" id="overlay">
-            <div class="col-12 text-center overlay-box" id="box-detail">
-                <h2 class="mb-0" id="overlay-name"></h2>
-                <span id="overlay-name-en"></span>
-                <div class="spacing line"></div>
-                <img id="overlay-img" src="" alt="">
-                <div class="spacing line"></div>
-
-                <div id="overlay-info"></div>
-            </div>
-            <div class="col-12 overlay-box readmore text-center"> อ่านเพิ่มเติม &gt; </div>
-        </div> -->
-
     </div>
 </body>
 </html>
