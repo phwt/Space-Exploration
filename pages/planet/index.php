@@ -5,7 +5,7 @@ if(!isset($_GET["p"])){
 }
 $cur_page = $_GET["p"];
 
-// Todo - eliminate this php to js usage
+// TODO - eliminate this php to js usage
 echo "<script>let current_page = $cur_page;</script>";
 
 $json = file_get_contents("../data.json");
@@ -36,7 +36,7 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
                 <img class="logo" src="<?php echo $data->img_png ?>"/>
                 <?php
                 foreach($data->poi as $poi){
-                    echo "<div class='poi-point' style='left:$poi->x%;top:$poi->y%;' poi-id='$poi->id'></div>";
+                    echo "<poi-point poi-id='$poi->id' x='$poi->x' y='$poi->y'></poi-point>";
                 }
                 ?>
             </div>

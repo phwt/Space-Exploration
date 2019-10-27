@@ -81,7 +81,37 @@ class OverlayPlanetInfo extends HTMLElement {
   }
 }
 
+class POIPoint extends HTMLElement {
+  constructor() {
+    super();
+    this.poiID = undefined;
+    this.x = 0;
+    this.y = 0;
+
+    this.addEventListener('click', () => {
+      document.querySelectorAll('overlay-planet-info')[0].reloadField(
+          data[current_page].poi[this.poiID].title,
+          data[current_page].poi[this.poiID].title_en,
+          data[current_page].poi[this.poiID].desc,
+          data[current_page].poi[this.poiID].image
+      );
+    });
+  }
+
+  // get getPoiID() {
+  //   return this.poiID;
+  // }
+
+  connectedCallback() {
+    this.poiID = this.getAttribute('poi-id');
+    this.innerHTML = `
+      <div class='poi-point' style='left: ` + this.getAttribute('x') + `; top: ` + this.getAttribute('y') + `;'></div>
+    `;
+  }
+}
+
 // Define a custom elements
 window.customElements.define('heading-box', HeadingBox);
 window.customElements.define('button-back', BackButton);
 window.customElements.define('overlay-planet-info', OverlayPlanetInfo);
+window.customElements.define('poi-point', POIPoint);
