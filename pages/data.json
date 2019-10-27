@@ -8,6 +8,7 @@
       "au": 0,
       "moons": 0,
       "img": "/Space-Exploration/pages/img/0-sun.svg",
+      "img_png": "/Space-Exploration/pages/img/png/0-sun-noflare.png",
       "size": 100,
       "link": 0,
       "no_orbit": true,
@@ -15,7 +16,8 @@
         ["ระยะเวลาโคจรรอบทางช้างเผือก", "230", "ล้านปี (โลก)"],
         ["ระยะห่างจากจุดศูนย์กลางทางช้างเผือก", "27,200", "ปีแสง"],
         ["จำนวนดาวเคราะห์บริวาร", "8", "ดวง"]
-      ]
+      ],
+      "poi": []
     },
     {
       "name": "ดาวพุธ",
@@ -26,8 +28,10 @@
       "au": 0.4,
       "moons": 0,
       "img": "/Space-Exploration/pages/img/1-mercury.svg",
+      "img_png": "/Space-Exploration/pages/img/png/1-mercury.png",
       "size": 10,
-      "link": 1
+      "link": 1,
+      "poi": []
     },
     {
       "name": "ดาวศุกร์",
@@ -38,8 +42,36 @@
       "au": 0.7,
       "moons": 0,
       "img": "/Space-Exploration/pages/img/2-venus.svg",
+      "img_png": "/Space-Exploration/pages/img/png/2-venus.png",
       "size": 17,
-      "link": 2
+      "link": 2,
+      "poi": [
+        {
+          "id": 0,
+          "x": 14,
+          "y": -10,
+          "title": "สถานีอวกาศนานาชาติ",
+          "title_en": "International Space Station",
+          "desc": "สถานีอวกาศนานาชาติสถานีอวกาศนานาชาติสถานีอวกาศนานาชาติ",
+          "image": "../img/planet/iss.jpg"
+        }, {
+          "id": 1,
+          "x": 20,
+          "y": 20,
+          "title": "ยาน Soyuz",
+          "title_en": "Soyuz",
+          "desc": "Soyuz ไม่ใช่ Progress",
+          "image": "../img/planet/iss2.jpg"
+        }, {
+          "id": 2,
+          "x": 5,
+          "y": 15,
+          "title": "กล้องโทรทรรศน์ฮับเบิล",
+          "title_en": "HST",
+          "desc": "กล้องกล้อง",
+          "image": "../img/planet/hst.jpg"
+        }
+      ]
     },
     {
       "name": "โลก",
@@ -50,6 +82,7 @@
       "au": 1,
       "moons": 1,
       "img": "/Space-Exploration/pages/img/3-earth.svg",
+      "img_png": "/Space-Exploration/pages/img/png/3-earth.png",
       "size": 20,
       "link": 3,
       "poi": [
@@ -88,8 +121,10 @@
       "au": 1.5,
       "moons": 2,
       "img": "/Space-Exploration/pages/img/4-mars.svg",
+      "img_png": "/Space-Exploration/pages/img/png/4-mars.png",
       "size": 13,
-      "link": 4
+      "link": 4,
+      "poi": []
     },
     {
       "name": "แถบดาวเคราะห์น้อย",
@@ -100,6 +135,7 @@
       "au": 2.7,
       "moons": 0,
       "img": "https://via.placeholder.com/350x350?text=Asteroid Belt",
+      "img_png": "https://via.placeholder.com/3png/50x350?text=Asteroid Bpng",
       "size": 20,
       "link": 5,
       "no_orbit": true,
@@ -107,7 +143,8 @@
         ["มวลทั้งหมด", "4%", "ของดวงจันทร์"],
         ["ระยะห่างจากดวงอาทิตย์", "2.2-3.2", "AU"],
         ["จำนวนดาวเคราะห์แคระ", "1", "ดวง"]
-      ]
+      ],
+      "poi": []
     },
     {
       "name": "ดาวพฤหัสบดี",
@@ -118,8 +155,10 @@
       "au": 5.2,
       "moons": 79,
       "img": "/Space-Exploration/pages/img/5-jupiter.svg",
+      "img_png": "/Space-Exploration/pages/img/png/5-jupiter.png",
       "size": 30,
-      "link": 6
+      "link": 6,
+      "poi": []
     },
     {
       "name": "ดาวเสาร์",
@@ -130,8 +169,10 @@
       "au": 9.5,
       "moons": 82,
       "img": "/Space-Exploration/pages/img/6-saturn.svg",
+      "img_png": "/Space-Exploration/pages/img/png/6-saturn.png",
       "size": 40,
-      "link": 7
+      "link": 7,
+      "poi": []
     },
     {
       "name": "ดาวยูเรนัส",
@@ -142,8 +183,10 @@
       "au": 19.2,
       "moons": 27,
       "img": "/Space-Exploration/pages/img/7-uranus.svg",
+      "img_png": "/Space-Exploration/pages/img/png/7-uranus.png",
       "size": 26,
-      "link": 8
+      "link": 8,
+      "poi": []
     },
     {
       "name": "ดาวเนปจูน",
@@ -154,8 +197,10 @@
       "au": 30.1,
       "moons": 14,
       "img": "/Space-Exploration/pages/img/8-neptune.svg",
+      "img_png": "/Space-Exploration/pages/img/png/8-neptune.png",
       "size": 22,
-      "link": 9
+      "link": 9,
+      "poi": []
     }
   ]
   
