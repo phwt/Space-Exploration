@@ -35,7 +35,7 @@ function updateSection() {
     dist_au = scroll_percentage * (set_au.bottom - set_au.top) + set_au.top;
     au = Math.floor(dist_au * 100) / 100;
   } catch (TypeError) {
-    au = 0;
+    au = '-';
   }
 
   document.querySelector('#overlay-au').reloadField(((section > 4) ? 'ระบบสุริยะชั้นนอก' : 'ระบบสุริยะชั้นใน'), au);
