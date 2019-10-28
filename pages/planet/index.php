@@ -22,7 +22,7 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="elements.js"></script>
+    <script src="../elements.js"></script>
     <script src="script.js"></script>
 </head>
 
