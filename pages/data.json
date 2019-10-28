@@ -88,24 +88,24 @@
       "poi": [
         {
           "id": 0,
-          "x": 48,
-          "y": 59,
+          "x": 0,
+          "y": 15,
           "title": "สถานีอวกาศนานาชาติ",
           "title_en": "International Space Station",
           "desc": "สถานีอวกาศนานาชาติสถานีอวกาศนานาชาติสถานีอวกาศนานาชาติ",
           "image": "../img/planet/iss.jpg"
         }, {
           "id": 1,
-          "x": 56,
-          "y": 39,
+          "x": -10,
+          "y": -20,
           "title": "ยาน Soyuz",
           "title_en": "Soyuz",
           "desc": "Soyuz ไม่ใช่ Progress",
           "image": "../img/planet/iss2.jpg"
         }, {
           "id": 2,
-          "x": 45,
-          "y": 34,
+          "x": 15,
+          "y": 30,
           "title": "กล้องโทรทรรศน์ฮับเบิล",
           "title_en": "HST",
           "desc": "กล้องกล้อง",

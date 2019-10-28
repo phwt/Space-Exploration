@@ -101,7 +101,7 @@ class POIPoint extends HTMLElement {
   connectedCallback() {
     this.poiID = this.getAttribute('poi-id');
     this.innerHTML = `
-      <div class='poi-point' style='left: ` + this.getAttribute('x') + `; top: ` + this.getAttribute('y') + `;'></div>
+      <div class='poi-point' style='left: ` + this.getAttribute('x') + `%; top: ` + this.getAttribute('y') + `%;'></div>
     `;
   }
 }
