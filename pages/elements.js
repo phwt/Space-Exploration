@@ -71,6 +71,9 @@ class HeadingBox extends HTMLElement {
 class BackButton extends HTMLElement {
   constructor() {
     super();
+    this.backEvent();
+  }
+  backEvent() {
     this.addEventListener('click', function() {
       window.history.back();
     });
@@ -253,6 +256,44 @@ class OverlayInfo extends OverlayPlanetInfo {
   }
 }
 
+class CurrentCard extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `<div>
+      <h3>▶&#xFE0E;&nbsp;` + this.getAttribute('heading') + `</h3>
+      ` + this.getAttribute('excerpt') + `
+      </div><hr>
+    `;
+  }
+}
+
+class RelatedCard extends CurrentCard {
+  constructor() {
+    super();
+    this.addEventListener('click', ()=>{
+      window.location.assign('?c=' + this.getAttribute('link'));
+    });
+  }
+
+  connectedCallback() {
+    this.innerHTML = `<div>
+      <h3>` + this.getAttribute('heading') + `</h3>
+      ` + this.getAttribute('excerpt') + `
+      </div><hr>
+    `;
+  }
+}
+
+// class BackSpecificButton extends BackButton {
+//   constructor() {
+//     super();
+//   }
+//   backEvent() {
+//     this.addEventListener('click', function() {
+//       window.location.assign('../?p=' + this.getAttribute('link'));
+//     });
+//   }
+// }
+
 // Main Page custom elements
 window.customElements.define('celestial-bodies', CelestialBodies);
 window.customElements.define('overlay-info', OverlayInfo);
@@ -263,3 +304,7 @@ window.customElements.define('heading-box', HeadingBox);
 window.customElements.define('button-back', BackButton);
 window.customElements.define('overlay-planet-info', OverlayPlanetInfo);
 window.customElements.define('poi-point', POIPoint);
+
+// File page custom elements
+window.customElements.define('card-current', CurrentCard);
+window.customElements.define('card-related', RelatedCard);

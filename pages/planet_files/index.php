@@ -3,7 +3,6 @@
 $json = file_get_contents("../data_poi.json");
 $data = json_decode($json);
 $cur_data = $data->{$_GET["c"]};
-// print_r($data);
 ?>
 <head>
     <meta charset="UTF-8">
@@ -28,20 +27,24 @@ $cur_data = $data->{$_GET["c"]};
     <div class="h-custom row paper no-gutters pt-5">
         <div class="col-2 bg-file file-side p-4">
             <div class="related">
-                <h3>▶&#xFE0E; <?php echo $cur_data->title ?></h3>
-                <?php echo $cur_data->excerpt ?>
-                <hr>
+                <card-current
+                    heading="<?php echo $cur_data->title ?>"
+                    excerpt="<?php echo $cur_data->excerpt ?>"
+                ></card-current>
 
                 <?php
                 foreach($cur_data->related as $relate){
                     $cur_relate = $data->$relate;
-                    echo "<h3>$cur_relate->title</h3>";
-                    echo "$cur_relate->excerpt";
-                    echo "<hr>";
+                    echo "<card-related
+                        heading='$cur_relate->title'
+                        excerpt='$cur_relate->excerpt'
+                        link='$relate'
+                    ></card-related>";
                 }
                 ?>
             </div>
         </div>
+
         <div class="col-1 text-center"></div>
         <div class="col-8 bg-file p-4">
             <h1 class="text-center"><?php echo $cur_data->title ?></h1><hr>
