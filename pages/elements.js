@@ -11,94 +11,6 @@ class CelestialBodies extends HTMLElement {
   }
 }
 
-class OverlayInfo extends OverlayPlanetInfo {
-  constructor() {
-    super();
-    this.name = '[name]';
-    this.type = '[type]';
-    this.detail = '[detail]';
-    this.link = '0';
-    this.field = [
-      ['ระยะเวลาการโคจร', 0, 'วัน (โลก)'],
-      ['ระยะห่างจากดวงอาทิตย์', 0, 'AU'],
-      ['จำนวนดาวบริวาร', 0, 'ดวง'],
-    ];
-  }
-
-  setReadmoreEvent() {
-    this.querySelector('.readmore').addEventListener('click', () => {
-      window.location.assign('planet?p=' + this.link);
-    });
-  }
-
-  getFields() {
-    let fieldElem = '';
-
-    this.field.forEach((element) => {
-      fieldElem += `
-                <div class="col-12">
-                    <span class="font-weight-bold">` + element[0] + `</span>
-                    <span class="field-value">` + element[1] + `</span>` + element[2] + `
-                </div>`;
-    });
-    return fieldElem;
-  }
-
-  render() {
-    this.innerHTML = `
-        <div class="row text-white" id="overlay-l" style="display: none">
-            <div class="col-12 text-center overlay-box bottom" id="box-detail">
-                <h2 class="mb-0">` + this.name + `</h2>
-                <span>` + this.type + `</span>
-                <div class="spacing line"></div>
-                <span>` + this.detail + `</span>
-                <div class="spacing line"></div>
-                <div class="row row-info">` + this.getFields() + `</div>
-            </div>
-            <div class="col-12 overlay-box readmore text-center"> อ่านเพิ่มเติม &gt; </div>
-        </div>
-        `;
-    this.setReadmoreEvent();
-  }
-
-  reloadField(name, type, detail, link, field, custom) {
-    this.timecalled = 0;
-    this.name = name;
-    this.type = type;
-    this.detail = detail;
-    this.link = link;
-
-    if (custom != undefined) {
-      this.field = custom;
-    } else {
-
-      this.field = [
-        ['ระยะเวลาการโคจร', 0, 'วัน (โลก)'],
-        ['ระยะห่างจากดวงอาทิตย์', 0, 'AU'],
-        ['จำนวนดาวบริวาร', 0, 'ดวง'],
-      ];
-
-      if (field.length != 3) throw 'Param \'field\' must have exactly 3 values';
-      field.forEach((element, index) => {
-        this.field[index][1] = element;
-      });
-    }
-
-    this.timecalled++;
-
-    if (this.timecalled == 1) {
-      this.render();
-      $(this).find('div').fadeIn();
-      return;
-    }
-
-    $(this).find('div').fadeOut(() => {
-      this.render();
-      $(this).find('div').fadeIn();
-    });
-  }
-}
-
 class OverlayAU extends HTMLElement {
   constructor() {
     super();
@@ -250,6 +162,94 @@ class POIPoint extends HTMLElement {
     this.innerHTML = `
       <div class='poi-point' style='left: ` + this.getAttribute('x') + `%; top: ` + this.getAttribute('y') + `%;'></div>
     `;
+  }
+}
+
+class OverlayInfo extends OverlayPlanetInfo {
+  constructor() {
+    super();
+    this.name = '[name]';
+    this.type = '[type]';
+    this.detail = '[detail]';
+    this.link = '0';
+    this.field = [
+      ['ระยะเวลาการโคจร', 0, 'วัน (โลก)'],
+      ['ระยะห่างจากดวงอาทิตย์', 0, 'AU'],
+      ['จำนวนดาวบริวาร', 0, 'ดวง'],
+    ];
+  }
+
+  setReadmoreEvent() {
+    this.querySelector('.readmore').addEventListener('click', () => {
+      window.location.assign('planet?p=' + this.link);
+    });
+  }
+
+  getFields() {
+    let fieldElem = '';
+
+    this.field.forEach((element) => {
+      fieldElem += `
+                <div class="col-12">
+                    <span class="font-weight-bold">` + element[0] + `</span>
+                    <span class="field-value">` + element[1] + `</span>` + element[2] + `
+                </div>`;
+    });
+    return fieldElem;
+  }
+
+  render() {
+    this.innerHTML = `
+        <div class="row text-white" id="overlay-l" style="display: none">
+            <div class="col-12 text-center overlay-box bottom" id="box-detail">
+                <h2 class="mb-0">` + this.name + `</h2>
+                <span>` + this.type + `</span>
+                <div class="spacing line"></div>
+                <span>` + this.detail + `</span>
+                <div class="spacing line"></div>
+                <div class="row row-info">` + this.getFields() + `</div>
+            </div>
+            <div class="col-12 overlay-box readmore text-center"> อ่านเพิ่มเติม &gt; </div>
+        </div>
+        `;
+    this.setReadmoreEvent();
+  }
+
+  reloadField(name, type, detail, link, field, custom) {
+    this.timecalled = 0;
+    this.name = name;
+    this.type = type;
+    this.detail = detail;
+    this.link = link;
+
+    if (custom != undefined) {
+      this.field = custom;
+    } else {
+
+      this.field = [
+        ['ระยะเวลาการโคจร', 0, 'วัน (โลก)'],
+        ['ระยะห่างจากดวงอาทิตย์', 0, 'AU'],
+        ['จำนวนดาวบริวาร', 0, 'ดวง'],
+      ];
+
+      if (field.length != 3) throw 'Param \'field\' must have exactly 3 values';
+      field.forEach((element, index) => {
+        this.field[index][1] = element;
+      });
+    }
+
+    this.timecalled++;
+
+    if (this.timecalled == 1) {
+      this.render();
+      $(this).find('div').fadeIn();
+      return;
+    }
+
+    $(this).find('div').fadeOut(() => {
+      this.render();
+      $(this).find('div').fadeIn();
+    });
   }
 }
 
