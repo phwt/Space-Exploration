@@ -11,7 +11,7 @@ class CelestialBodies extends HTMLElement {
   }
 }
 
-class OverlayInfo extends HTMLElement {
+class OverlayInfo extends OverlayPlanetInfo {
   constructor() {
     super();
     this.name = '[name]';
@@ -59,10 +59,6 @@ class OverlayInfo extends HTMLElement {
         </div>
         `;
     this.setReadmoreEvent();
-  }
-
-  connectedCallback() {
-    this.render();
   }
 
   reloadField(name, type, detail, link, field, custom) {
