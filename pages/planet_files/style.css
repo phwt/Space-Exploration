@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
+
+body {
+    background-image: url(../img/stars-1080.jpg);
+
+    font-family: 'Kanit';
+    font-weight: 200;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+div.back{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 4vw;
+    padding-top: 3em;
+}
+
+div.back > h2{
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.triangle{
+    transition: .2s;
+}
+
+div.back:hover .triangle{
+    margin-left: -15%;
+}
+
+.row.paper{
+    margin-top: calc(3em + 2rem);
+}
+
+.bg-file{
+    background: lightgoldenrodyellow;
+}
+
+.h-custom{
+    height: calc(100% - 3em - 2rem - 3rem);
+}
+
+.triangle-nav{
+    color: white;
+    font-size: 3em;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .2s;
+}
+
+.triangle-nav:hover{
+    cursor: pointer;
+}
+
+.triangle-nav.left:hover{
+    margin-left: -10%;
+}
+
+.triangle-nav.right:hover{
+    margin-right: -10%;
+}
+
+.file-side{
+    transition: .2s;
+}
+
+.file-side:hover{
+    cursor: pointer;
+    margin-top: -1%;
+}

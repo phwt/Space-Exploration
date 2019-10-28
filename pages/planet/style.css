@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
+
+body {
+    background-image: url('../img/stars-1080.jpg');
+    font-family: 'Kanit';
+    font-weight: 200;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+/* .a {
+    height: 3%;
+    position: absolute;
+    left: 43%;
+    top: 40%;
+}
+
+.b {
+    height: 3%;
+    position: absolute;
+    left: 45%;
+    top: 60%;
+}
+
+.c {
+    height: 3%;
+    position: absolute;
+    left: 60%;
+    top: 67%;
+} */
+
+/* .img-fluid {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+} */
+
+.planet-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70vh;
+}
+
+.files {
+    position: absolute;
+    bottom: 0;
+    right: 4vw;
+    background: lightgoldenrodyellow;
+    width: 20vw;
+    height: 9vw;
+    transition: height 0.2s ease-out;
+}
+
+.files:hover {
+    cursor: pointer;
+    height: 12vw;
+    transition: height 0.2s ease-in;
+}
+
+div.back {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 4vw;
+    padding-top: 3em;
+}
+
+div.back>h2 {
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.triangle {
+    transition: .2s;
+}
+
+div.back:hover .triangle {
+    margin-left: -15%;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper>h2 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div.info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3em;
+    color: white;
+}
+
+[id^=heading] {
+    display: block;
+}
+
+#heading-th {
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 65px;
+}
+
+#heading-en {
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 32px;
+}
+
+/* @media screen and (max-width: 1440px) {
+    .planet-img {
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .planet-img {
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .planet-img {
+        height: 40%;
+    }
+} */
+
+/* For testing purpose only */
+
+.mock-moon {
+    background: lightgray;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 16%;
+    left: 61%;
+    z-index: 5;
+}
+
+/* .mock-poi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+} */
+
+.poi-point {
+    background: white;
+    border: 1px solid black;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 100%;
+    z-index: 5;
+    transition: .2s;
+    position: absolute;
+}
+
+.mock-pos-0{
+    top: 59%;
+    left: 48%;
+}
+
+.mock-pos-1{
+    top: 39%;
+    left: 56%;
+}
+
+.mock-pos-2{
+    top: 34%;
+    left: 45%;
+}
+
+.poi-point:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+
+.poi-point:active{
+    opacity: 1;
+}
+
+.overlay-box {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1em;
+    transition: height 0.5s;
+}
+
+.overlay-box.readmore {
+    border-top: 0;
+    transition: .2s;
+}
+
+.overlay-box.readmore:hover,
+.btn-space:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.overlay-box.readmore:active,
+.btn-space:active {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#overlay {
+    position: absolute;
+    top: 50%;
+    /* bottom: 50%; */
+    left: 3vw;
+    /* left: calc(3vw + 22vw + 50vw); */
+    width: 22vw;
+    transform: translateY(-50%);
+}
+
+#box-detail > img{
+    width: 100%;
+}
+
+.spacing {
+    height: 1em;
+    width: 100%;
+}
+
+.spacing.line {
+    height: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: .5em 0 .5em 0;
+}
+
+.spacing.line-narrow {
+    height: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: .25em 0 .25em 0;
+}
+
+div.shadow {
+    position: absolute;
+    max-width: 45%;
+    max-height: 45%;
+    top: 50%;
+    left: 50%;
+    overflow: visible;
+}
+
+img.logo {
+    position: relative;
+    /* height: 100vh; */
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: -50%;
+    margin-left: -50%;
+}
+
+.img-wrapper{
+    position: relative;
+}

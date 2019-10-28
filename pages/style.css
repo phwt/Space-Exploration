@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
+
 body {
     /* background: url(stars-1080.jpg); */
     /* background: linear-gradient(rgba(255,255,255,0.5), green); */
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 
     background-image:
-        /* linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0)), */
-        url(stars-1080.jpg);
+        linear-gradient(to bottom, rgba(75, 81, 127, .5), rgba(0, 0, 0, 0)),
+        url(img/stars-1080.jpg);
 
     font-family: 'Kanit';
     font-weight: 200;
@@ -23,13 +24,14 @@ body {
     overflow-x: hidden;
 }
 
-a, a:hover{
+a,
+a:hover {
     text-decoration: inherit;
     color: inherit;
 }
 
 div.h-100 {
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 
@@ -55,9 +57,9 @@ div.h-100>.bodies,
     font-weight: 300;
 }
 
-.overlay-box.bottom {
+/* .overlay-box.bottom {
     height: 90%;
-}
+} */
 
 .overlay-box.readmore {
     border-top: 0;
@@ -76,14 +78,32 @@ div.h-100>.bodies,
     background: rgba(255, 255, 255, 0.2);
 }
 
-#overlay {
+#overlay-l {
     position: -webkit-sticky;
     position: sticky;
     bottom: 50%;
     left: 3vw;
-    min-width: 22vw;
-    max-width: 22vw;
+    /* left: calc(3vw + 22vw + 50vw); */
+    width: 22vw;
     transform: translateY(50%);
+}
+
+#overlay-r {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 50%;
+    /* left: 3vw; */
+    left: calc(3vw + 22vw + 50vw);
+    width: 22vw;
+    transform: translateY(50%);
+}
+
+#overlay-r > .overlay-box::before{
+    content: "◀";
+    position: absolute;
+    top: 50%;
+    left: -1em;
+    transform: translateY(-50%);
 }
 
 .row-info .field-value {
@@ -137,12 +157,41 @@ hr {
     transition: .2s;
 }
 
-.glow {
-    -webkit-filter: drop-shadow(0px 0px 50px rgba(255, 255, 209, 1));
-    filter: drop-shadow(0px 0px 50px rgba(255, 255, 209, 1));
-}
+/* .glow {
+    -webkit-filter: drop-shadow(0px 0px 250px rgba(255, 255, 209, 1));
+    filter: drop-shadow(0px 0px 250px rgba(255, 255, 209, 1));
+} */
 
-.tips{
+.tips {
     opacity: .5;
     font-size: 14px
+}
+
+.h-100.section {
+    background: url(img/orbit.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    shape-rendering: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    transition: .2s;
+    border-radius: 16px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
 }

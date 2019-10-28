@@ -1,0 +1,24 @@
+{
+  "name": "space-exploration",
+  "version": "1.0.0",
+  "description": "This project is part of subject Web Technology\r Faculty of Information Technology, King Mongkut's Institute of Technology Ladkrabang (KMITL).",
+  "main": "pages/index.php",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-google": "^0.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phwt/Space-Exploration.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phwt/Space-Exploration/issues"
+  },
+  "homepage": "https://github.com/phwt/Space-Exploration#readme"
+}

@@ -1,0 +1,206 @@
+[
+    {
+      "name": "ดวงอาทิตย์",
+      "name_en": "Sun",
+      "type": "ดาวฤกษ์",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
+      "orbital_period": 0,
+      "au": 0,
+      "moons": 0,
+      "img": "/Space-Exploration/pages/img/0-sun.svg",
+      "img_png": "/Space-Exploration/pages/img/png/0-sun-noflare.png",
+      "size": 100,
+      "link": 0,
+      "no_orbit": true,
+      "custom": [
+        ["ระยะเวลาโคจรรอบทางช้างเผือก", "230", "ล้านปี (โลก)"],
+        ["ระยะห่างจากจุดศูนย์กลางทางช้างเผือก", "27,200", "ปีแสง"],
+        ["จำนวนดาวเคราะห์บริวาร", "8", "ดวง"]
+      ],
+      "poi": []
+    },
+    {
+      "name": "ดาวพุธ",
+      "name_en": "ดาวพุธ",
+      "type": "ดาวเคราะห์หิน (Terrestrial Planet)",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
+      "orbital_period": 87,
+      "au": 0.4,
+      "moons": 0,
+      "img": "/Space-Exploration/pages/img/1-mercury.svg",
+      "img_png": "/Space-Exploration/pages/img/png/1-mercury.png",
+      "size": 10,
+      "link": 1,
+      "poi": []
+    },
+    {
+      "name": "ดาวศุกร์",
+      "name_en": "ดาวศุกร์",
+      "type": "ดาวเคราะห์หิน (Terrestrial Planet)",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
+      "orbital_period": 224,
+      "au": 0.7,
+      "moons": 0,
+      "img": "/Space-Exploration/pages/img/2-venus.svg",
+      "img_png": "/Space-Exploration/pages/img/png/2-venus.png",
+      "size": 17,
+      "link": 2,
+      "poi": [
+        {
+          "id": 0,
+          "x": 14,
+          "y": -10,
+          "title": "สถานีอวกาศนานาชาติ",
+          "title_en": "International Space Station",
+          "desc": "สถานีอวกาศนานาชาติสถานีอวกาศนานาชาติสถานีอวกาศนานาชาติ",
+          "image": "../img/planet/iss.jpg"
+        }, {
+          "id": 1,
+          "x": 20,
+          "y": 20,
+          "title": "ยาน Soyuz",
+          "title_en": "Soyuz",
+          "desc": "Soyuz ไม่ใช่ Progress",
+          "image": "../img/planet/iss2.jpg"
+        }, {
+          "id": 2,
+          "x": 5,
+          "y": 15,
+          "title": "กล้องโทรทรรศน์ฮับเบิล",
+          "title_en": "HST",
+          "desc": "กล้องกล้อง",
+          "image": "../img/planet/hst.jpg"
+        }
+      ]
+    },
+    {
+      "name": "โลก",
+      "name_en": "Earth",
+      "type": "ดาวเคราะห์หิน (Terrestrial Planet)",
+      "details": "ดาวเคราะห์ลำดับที่สามจากดวงอาทิตย์ และเป็นวัตถุทางดาราศาสตร์เพียงหนึ่งเดียวที่ทราบว่ามีสิ่งมีชีวิต ร้อยละ 71 ของพื้นผิวโลกปกคลุมด้วยน้ำซึ่งส่วนใหญ่เป็นมหาสมุทร อีกร้อยละ 29 ที่เหลือเป็นแผ่นดิน",
+      "orbital_period": 365,
+      "au": 1,
+      "moons": 1,
+      "img": "/Space-Exploration/pages/img/3-earth.svg",
+      "img_png": "/Space-Exploration/pages/img/png/3-earth.png",
+      "size": 20,
+      "link": 3,
+      "poi": [
+        {
+          "id": 0,
+          "x": 0,
+          "y": 15,
+          "title": "สถานีอวกาศนานาชาติ",
+          "title_en": "International Space Station",
+          "desc": "สถานีอวกาศนานาชาติสถานีอวกาศนานาชาติสถานีอวกาศนานาชาติ",
+          "image": "../img/planet/iss.jpg"
+        }, {
+          "id": 1,
+          "x": -10,
+          "y": -20,
+          "title": "ยาน Soyuz",
+          "title_en": "Soyuz",
+          "desc": "Soyuz ไม่ใช่ Progress",
+          "image": "../img/planet/iss2.jpg"
+        }, {
+          "id": 2,
+          "x": 15,
+          "y": 30,
+          "title": "กล้องโทรทรรศน์ฮับเบิล",
+          "title_en": "HST",
+          "desc": "กล้องกล้อง",
+          "image": "../img/planet/hst.jpg"
+        }
+      ]
+    }, {
+      "name": "ดาวอังคาร",
+      "name_en": "ดาวอังคาร",
+      "type": "ดาวเคราะห์หิน (Terrestrial Planet)",
+      "details": "ดาวเคราะห์ลำดับที่สี่จากดวงอาทิตย์ เป็นดาวเคราะห์เล็กที่สุดอันดับที่สองในระบบสุริยะรองจากดาวพุธ เป็นดาวเคราะห์หินที่มีบรรยากาศเบาบาง มีลักษณะพื้นผิวคล้ายคลึงกับทั้งหลุมอุกกาบาตบนดวงจันทร์ และภูเขาไฟ ทะเลทราย ตลอดจนน้ำแข็งขั้วดาวที่ปรากฏบนโลก",
+      "orbital_period": 686,
+      "au": 1.5,
+      "moons": 2,
+      "img": "/Space-Exploration/pages/img/4-mars.svg",
+      "img_png": "/Space-Exploration/pages/img/png/4-mars.png",
+      "size": 13,
+      "link": 4,
+      "poi": []
+    },
+    {
+      "name": "แถบดาวเคราะห์น้อย",
+      "name_en": "แถบดาวเคราะห์น้อย",
+      "type": "แถบดาวเคราะห์น้อย",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
+      "orbital_period": 0,
+      "au": 2.7,
+      "moons": 0,
+      "img": "https://via.placeholder.com/350x350?text=Asteroid Belt",
+      "img_png": "https://via.placeholder.com/3png/50x350?text=Asteroid Bpng",
+      "size": 20,
+      "link": 5,
+      "no_orbit": true,
+      "custom": [
+        ["มวลทั้งหมด", "4%", "ของดวงจันทร์"],
+        ["ระยะห่างจากดวงอาทิตย์", "2.2-3.2", "AU"],
+        ["จำนวนดาวเคราะห์แคระ", "1", "ดวง"]
+      ],
+      "poi": []
+    },
+    {
+      "name": "ดาวพฤหัสบดี",
+      "name_en": "ดาวพฤหัสบดี",
+      "type": "ดาวแก๊สยักษ์ (Gas Giant)",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
+      "orbital_period": 4332,
+      "au": 5.2,
+      "moons": 79,
+      "img": "/Space-Exploration/pages/img/5-jupiter.svg",
+      "img_png": "/Space-Exploration/pages/img/png/5-jupiter.png",
+      "size": 30,
+      "link": 6,
+      "poi": []
+    },
+    {
+      "name": "ดาวเสาร์",
+      "name_en": "ดาวเสาร์",
+      "type": "ดาวแก๊สยักษ์ (Gas Giant)",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
+      "orbital_period": 10759,
+      "au": 9.5,
+      "moons": 82,
+      "img": "/Space-Exploration/pages/img/6-saturn.svg",
+      "img_png": "/Space-Exploration/pages/img/png/6-saturn.png",
+      "size": 40,
+      "link": 7,
+      "poi": []
+    },
+    {
+      "name": "ดาวยูเรนัส",
+      "name_en": "ดาวยูเรนัส",
+      "type": "ดาวแก๊สยักษ์ (Gas Giant)",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
+      "orbital_period": 30688,
+      "au": 19.2,
+      "moons": 27,
+      "img": "/Space-Exploration/pages/img/7-uranus.svg",
+      "img_png": "/Space-Exploration/pages/img/png/7-uranus.png",
+      "size": 26,
+      "link": 8,
+      "poi": []
+    },
+    {
+      "name": "ดาวเนปจูน",
+      "name_en": "ดาวเนปจูน",
+      "type": "ดาวแก๊สยักษ์ (Gas Giant)",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
+      "orbital_period": 60182,
+      "au": 30.1,
+      "moons": 14,
+      "img": "/Space-Exploration/pages/img/8-neptune.svg",
+      "img_png": "/Space-Exploration/pages/img/png/8-neptune.png",
+      "size": 22,
+      "link": 9,
+      "poi": []
+    }
+  ]
+  

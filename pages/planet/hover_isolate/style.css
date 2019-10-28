@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
+
+body {
+    font-family: 'Kanit';
+    font-weight: 200;
+}
+
+
+.files,.files2,.files3
+ {
+    position: absolute;
+    bottom: 0;
+    left: 4vw;
+    background: lightgoldenrodyellow;
+    width: 20vw;
+    height: 9vw;
+    transition: 0.2s ease-out;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+
+
+.contain {
+    position: absolute;
+    bottom: 0;
+    left: 4vw;
+    background: none;
+    width: 20vw;
+    height: 9vw;
+    transition: 0.2s ease-out;
+}
+
+
+/* .files:hover{
+    cursor: pointer;
+    height: 12vw;
+    transition: height 0.2s ease-in;
+} */
+
+.contain:hover .files {
+    cursor: pointer;
+    height: 12vw;
+}
+
+.contain:hover .files2 {
+    cursor: pointer;
+    transform: rotate(20deg);
+    left: 13.5vh;
+    bottom: 7vh;
+}
+
+.contain:hover .files3 {
+    cursor: pointer;
+    transform: rotate(-10deg);
+    height: 16vw;
+    left: 2vh;
+    bottom: 3.5vh;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper>h2 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
