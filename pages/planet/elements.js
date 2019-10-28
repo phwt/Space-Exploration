@@ -98,10 +98,6 @@ class POIPoint extends HTMLElement {
     });
   }
 
-  // get getPoiID() {
-  //   return this.poiID;
-  // }
-
   connectedCallback() {
     this.poiID = this.getAttribute('poi-id');
     this.innerHTML = `
