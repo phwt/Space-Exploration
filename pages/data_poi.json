@@ -1,20 +1,26 @@
 {
+    "18": {
+        "title": "Gallieo Probe",
+        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "related": ["29", "2"],
+        "parent": "3"
+    },
+    "25": {
+        "title": "Great Dark Spot",
+        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "related": ["29", "2"],
+        "parent": "3"
+    },
     "29": {
         "title": "Tidal Lock",
         "excerpt": "Lorem ipsum dolor sit amet 1",
-        "related": ["1", "2"],
-        "parent": "3"
-    },
-    "1": {
-        "title": "Sample Heading 2",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
-        "related": ["0", "2"],
+        "related": ["18", "2"],
         "parent": "3"
     },
     "2": {
         "title": "Sample Heading 3",
         "excerpt": "Lorem ipsum dolor sit amet 3",
-        "related": ["0", "1"],
+        "related": ["18", "29"],
         "parent": "3"
     }
 }
