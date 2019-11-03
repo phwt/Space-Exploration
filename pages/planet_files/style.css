@@ -100,3 +100,11 @@ card-related > div:hover {
     cursor: pointer;
     margin-top: -1%;
 } */
+
+.text-center > img{
+    max-width: 50%;
+}
+
+.center-file{
+    font-size: 20px;
+}
