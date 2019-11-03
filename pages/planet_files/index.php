@@ -46,9 +46,9 @@ $cur_data = $data->{$_GET["c"]};
         </div>
 
         <div class="col-1 text-center"></div>
-        <div class="col-8 bg-file p-4">
+        <div class="col-8 bg-file p-4 center-file">
             <h1 class="text-center"><?php echo $cur_data->title ?></h1><hr>
-            <?php echo file_get_contents("subpage/" . $_GET["c"] . ".html") ?>
+            <?php echo file_get_contents("subpage/" . $_GET["c"] . "/index.html") ?>
         </div>
         <div class="col-1"></div>
     </div>
