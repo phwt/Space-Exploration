@@ -105,6 +105,10 @@ card-related > div:hover {
     max-width: 50%;
 }
 
+.text-center.except > img{
+    max-width: 90% !important;
+}
+
 .center-file{
     font-size: 20px;
 }
