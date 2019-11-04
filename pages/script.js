@@ -38,7 +38,7 @@ function updateSection() {
     au = '-';
   }
 
-  document.querySelector('#overlay-au').reloadField(((section > 4) ? 'ระบบสุริยะชั้นนอก' : 'ระบบสุริยะชั้นใน'), au);
+  document.querySelector('#overlay-au').reloadField(((section > 5) ? 'ระบบสุริยะชั้นนอก' : 'ระบบสุริยะชั้นใน'), au);
 
   if (section == 0) {
     $('#overlay-l, #overlay-r').stop().fadeOut();
