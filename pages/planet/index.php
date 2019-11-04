@@ -22,7 +22,7 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="elements.js"></script>
+    <script src="../elements.js"></script>
     <script src="script.js"></script>
 </head>
 
@@ -36,7 +36,7 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
                 <img class="logo" src="<?php echo $data->img_png ?>"/>
                 <?php
                 foreach($data->poi as $poi){
-                    echo "<poi-point poi-id='$poi->id' x='$poi->x' y='$poi->y'></poi-point>";
+                    echo "<poi-point poi-idx='$poi->idx' poi-id='$poi->id' x='$poi->x' y='$poi->y'></poi-point>";
                 }
                 ?>
             </div>
@@ -44,11 +44,13 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
 
         <button-back></button-back>
 
-        <div class="files">
-            <div class="wrapper">
-                <h2>แฟ้มข้อมูล</h2>
-            </div>
-        </div>
+        <button-files topics='<?php
+        $topics = "";
+        foreach($data->poi as $poi){
+            $topics = $topics . $poi->id . ",";
+        }
+        echo rtrim($topics, ',');
+        ?>'></button-files>
 
         <heading-box
             maintitle="<?php echo $data->name ?>"

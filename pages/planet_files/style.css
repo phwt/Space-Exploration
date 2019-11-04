@@ -42,7 +42,8 @@ div.back:hover .triangle{
 }
 
 .bg-file{
-    background: lightgoldenrodyellow;
+    /* background: lightgoldenrodyellow; */
+    background: hsl(60, 33%, 82%);
 }
 
 .h-custom{
@@ -62,7 +63,28 @@ div.back:hover .triangle{
     cursor: pointer;
 }
 
-.triangle-nav.left:hover{
+.related {
+    position: sticky;
+    top: 1.5em;
+}
+
+card-current > div {
+    outline: 1em solid rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+card-related > div {
+    transition: linear .2s;
+    outline: 1em solid rgba(0, 0, 0, 0);
+}
+
+card-related > div:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+    outline: 1em solid rgba(0, 0, 0, 0.1);
+}
+
+/* .triangle-nav.left:hover{
     margin-left: -10%;
 }
 
@@ -77,4 +99,16 @@ div.back:hover .triangle{
 .file-side:hover{
     cursor: pointer;
     margin-top: -1%;
+} */
+
+.text-center > img{
+    max-width: 50%;
+}
+
+.text-center.except > img{
+    max-width: 90% !important;
+}
+
+.center-file{
+    font-size: 20px;
 }

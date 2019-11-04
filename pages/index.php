@@ -19,10 +19,10 @@
             <img class="mb-5" id="top-logo" src="https://via.placeholder.com/400x300?text=Logo" alt=""><br>
             <button class="mt-5 btn-space" id="btn-open-section">Let's Go!</button>
         </div>
-        <!-- <h2 class="text-white center-me">หน้าเปิด</h2> -->
     </div>
 
-    <span id="content-area text-white"><?php
+    <span id="content-area text-white">
+        <?php
         $json = file_get_contents("data.json");
         $data = json_decode($json);
         foreach ($data as $value) {

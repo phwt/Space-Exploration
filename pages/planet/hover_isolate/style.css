@@ -53,7 +53,7 @@ body {
 .contain:hover .files3 {
     cursor: pointer;
     transform: rotate(-10deg);
-    height: 16vw;
+    height: 10vw;
     left: 2vh;
     bottom: 3.5vh;
 }
