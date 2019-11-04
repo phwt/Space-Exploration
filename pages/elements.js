@@ -74,7 +74,7 @@ class BackButton extends HTMLElement {
     this.backEvent();
   }
   backEvent() {
-    this.addEventListener('click', function() {
+    this.addEventListener('click', function () {
       window.history.back();
     });
   }
@@ -93,11 +93,12 @@ class OverlayPlanetInfo extends HTMLElement {
     this.subtitle = '[subtitle]';
     this.detail = '[detail]';
     this.img = undefined;
+    this.link = undefined;
   }
 
   setReadmoreEvent() {
-    this.querySelector('.readmore').addEventListener('click', function() {
-      console.log('you click readmore');
+    this.querySelector('.readmore').addEventListener('click', () => {
+      window.location.assign('../planet_files/?c=' + this.link);
     });
   }
 
@@ -123,12 +124,13 @@ class OverlayPlanetInfo extends HTMLElement {
     this.render();
   }
 
-  reloadField(maintitle, subtitle, detail, img) {
+  reloadField(maintitle, subtitle, detail, img, link) {
     this.maintitle = maintitle;
     this.subtitle = subtitle;
     this.detail = detail;
     this.img = img;
     this.timecalled++;
+    this.link = link;
 
     if (this.timecalled == 1) {
       this.render();
@@ -147,21 +149,24 @@ class POIPoint extends HTMLElement {
   constructor() {
     super();
     this.poiID = undefined;
+    this.poiIDX = undefined;
     this.x = 0;
     this.y = 0;
 
     this.addEventListener('click', () => {
       document.querySelectorAll('overlay-planet-info')[0].reloadField(
-          data[current_page].poi[this.poiID].title,
-          data[current_page].poi[this.poiID].title_en,
-          data[current_page].poi[this.poiID].desc,
-          data[current_page].poi[this.poiID].image
+          data[current_page].poi[this.poiIDX].title,
+          data[current_page].poi[this.poiIDX].title_en,
+          data[current_page].poi[this.poiIDX].desc,
+          data[current_page].poi[this.poiIDX].image,
+          this.poiID
       );
     });
   }
 
   connectedCallback() {
     this.poiID = this.getAttribute('poi-id');
+    this.poiIDX = this.getAttribute('poi-idx');
     this.innerHTML = `
       <div class='poi-point' style='left: ` + this.getAttribute('x') + `%; top: ` + this.getAttribute('y') + `%;'></div>
     `;
@@ -269,7 +274,7 @@ class CurrentCard extends HTMLElement {
 class RelatedCard extends CurrentCard {
   constructor() {
     super();
-    this.addEventListener('click', ()=>{
+    this.addEventListener('click', () => {
       window.location.assign('?c=' + this.getAttribute('link'));
     });
   }
@@ -280,6 +285,23 @@ class RelatedCard extends CurrentCard {
       ` + this.getAttribute('excerpt') + `
       </div><hr>
     `;
+  }
+}
+
+class FilesButton extends HTMLElement {
+
+  connectedCallback() {
+    this.innerHTML = `
+        <div class="files">
+            <div class="wrapper">
+                <h2>แฟ้มข้อมูล</h2>
+            </div>
+        </div>
+        `;
+
+    this.addEventListener('click', () => {
+      window.location.assign('../planet_files/?v=' + this.getAttribute('topics'));
+    });
   }
 }
 
@@ -304,6 +326,7 @@ window.customElements.define('heading-box', HeadingBox);
 window.customElements.define('button-back', BackButton);
 window.customElements.define('overlay-planet-info', OverlayPlanetInfo);
 window.customElements.define('poi-point', POIPoint);
+window.customElements.define('button-files', FilesButton);
 
 // File page custom elements
 window.customElements.define('card-current', CurrentCard);
