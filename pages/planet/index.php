@@ -44,7 +44,13 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
 
         <button-back></button-back>
 
-        <button-files topics='9,10'></button-files>
+        <button-files topics='<?php
+        $topics = "";
+        foreach($data->poi as $poi){
+            $topics = $topics . $poi->id . ",";
+        }
+        echo rtrim($topics, ',');
+        ?>'></button-files>
 
         <heading-box
             maintitle="<?php echo $data->name ?>"
