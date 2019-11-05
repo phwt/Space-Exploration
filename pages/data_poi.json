@@ -1,7 +1,7 @@
 {
     "0": {
         "title": "Solar Flare",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "เปลวสุริยะการระเบิดใหญ่ในชั้นบรรยากาศของดวงอาทิตย์",
         "related": [
             "1",
             "2"
@@ -10,7 +10,7 @@
     },
     "1": {
         "title": "Aurora",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ปรากฏการณ์แสงเหนือ/ใต้บนโลก",
         "related": [
             "0",
             "2"
@@ -19,7 +19,7 @@
     },
     "2": {
         "title": "Parker Solar Probe",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ยานสำรวจดวงอาทิตย์",
         "related": [
             "0",
             "1"
@@ -28,7 +28,7 @@
     },
     "3": {
         "title": "MESSENGER",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ยานสำรวจพื้นผิว, สภาพแวดล้อมของดาวพุธ",
         "related": [
             "4",
             "5"
@@ -37,7 +37,7 @@
     },
     "4": {
         "title": "BepiColombo",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ยานสำรวจสนามแม่เหล็ก, ส่วนประกอบของดาวพุธ",
         "related": [
             "3",
             "5"
@@ -46,7 +46,7 @@
     },
     "5": {
         "title": "Caloris Planitia",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "หนึ่งในหลุมอุกกาบาตที่ใหญ่ที่สุดในระบบสุริยะ",
         "related": [
             "3",
             "4"
@@ -55,7 +55,7 @@
     },
     "6": {
         "title": "Venera 1",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ยานสำรวจลำแรกที่บินผ่านดาวศุกร์",
         "related": [
             "7",
             "8"
@@ -64,7 +64,7 @@
     },
     "7": {
         "title": "Venera 7",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ยานสำรวจลำแรกที่ลงจอดบนดาวดวงอื่น",
         "related": [
             "6",
             "8"
@@ -73,7 +73,7 @@
     },
     "8": {
         "title": "Venera 13",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ยานสำรวจลำแรกที่ถ่ายภาพดาวศุกร์มาได้",
         "related": [
             "6",
             "7"
@@ -82,7 +82,7 @@
     },
     "9": {
         "title": "ISS",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "สถานีอวกาศนานาชาติ",
         "related": [
             "10",
             "11"
@@ -91,7 +91,7 @@
     },
     "10": {
         "title": "Hubble Space Telescope",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "กล้องโทรทรรศน์อวกาศฮับเบิล",
         "related": [
             "9",
             "11"
@@ -100,7 +100,7 @@
     },
     "11": {
         "title": "ดวงจันทร์",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ดาวบริวารหนึ่งเดียวของโลก",
         "related": [
             "9",
             "10"
@@ -109,7 +109,7 @@
     },
     "12": {
         "title": "น้ำแข็งบนขั้วเหนือ/ใต้",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "น้ำในรูปแบบของแข็งบนดาวอังคาร",
         "related": [
             "13",
             "14",
@@ -119,7 +119,7 @@
     },
     "13": {
         "title": "Terraforming Mars",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "การทำให้ดาวอังคารอยู่อาศัยได้",
         "related": [
             "12",
             "14",
@@ -129,7 +129,7 @@
     },
     "14": {
         "title": "ยาน Rover",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ยานโรเวอร์ต่างๆ ที่ลงไปสำรวจดาวอังคาร",
         "related": [
             "12",
             "13",
@@ -139,7 +139,7 @@
     },
     "15": {
         "title": "Mariner 4",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ยานลำแรกที่เดินทางไปดาวอังคารและถ่ายภาพแรกมา",
         "related": [
             "12",
             "13",
@@ -149,7 +149,7 @@
     },
     "16": {
         "title": "Great Red Spot",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "พายุขนาดใหญ่บนดาวพฤหัสบดีเกิดมาแล้วกว่า 350 ปี",
         "related": [
             "17",
             "18"
@@ -158,7 +158,7 @@
     },
     "17": {
         "title": "Convection Cell",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "การหมุนเวียนของชั้นบรรยากาศแบ่งเป็นแถบสี",
         "related": [
             "16",
             "18"
@@ -167,7 +167,7 @@
     },
     "18": {
         "title": "Galileo Probe",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ยานสำรวจที่ถูกส่งลงไปในชั้นบรรยากาศของดาวพฤหัสบดี",
         "related": [
             "16",
             "17"
@@ -176,7 +176,7 @@
     },
     "19": {
         "title": "Cassini-Huygens",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ยานสำรวจดาวเสาร์และยานลงจอด",
         "related": [
             "20",
             "21"
@@ -185,7 +185,7 @@
     },
     "20": {
         "title": "พายุหกเหลี่ยม",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "พายุรูปหกเหลี่ยมที่ขั้วเหนือของดาวเสาร์",
         "related": [
             "19",
             "21"
@@ -194,7 +194,7 @@
     },
     "21": {
         "title": "Enceladus ",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ดวงจันทร์น้ำแข็งของดาวเสาร์",
         "related": [
             "19",
             "20"
@@ -203,7 +203,7 @@
     },
     "22": {
         "title": "Sideways Planet",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "การเป็นดาวเคราะห์เอียงตะแคงของดาวยูเรนัส",
         "related": [
             "23",
             "24"
@@ -212,7 +212,7 @@
     },
     "23": {
         "title": "Ice Giants Planet",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ดาวเคราะห์น้ำแข็งยักษ์(ดาวยูเรนัส)",
         "related": [
             "22",
             "24"
@@ -221,7 +221,7 @@
     },
     "24": {
         "title": "กลิ่นเหม็นก๊าซไข่เน่า",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "กลิ่นเน่าเหม็นคล้ายไข่เน่าของดาวยูเรนัส",
         "related": [
             "22",
             "23"
@@ -230,7 +230,7 @@
     },
     "25": {
         "title": "Great Dark Spot",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "พายุขนาดใหญ่บนดาวเนปจูน",
         "related": [
             "26",
             "27"
@@ -239,7 +239,7 @@
     },
     "26": {
         "title": "Triton",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ดาวบริวารของดาวเนปจูนที่มีขนาดใหญ่ที่สุด",
         "related": [
             "25",
             "27"
@@ -248,7 +248,7 @@
     },
     "27": {
         "title": "Ice Giants Planet",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ดาวเคราะห์น้ำแข็งยักษ์(ดาวเนปจูน)",
         "related": [
             "25",
             "26"
@@ -257,7 +257,7 @@
     },
     "28": {
         "title": "Charon",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ดาวบริวารที่ใหญ่ที่สุดของดาวพลูโต",
         "related": [
             "29",
             "30"
@@ -266,7 +266,7 @@
     },
     "29": {
         "title": "Tidally Locked",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "ปรากฏการณ์ไทดัลล๊อค",
         "related": [
             "28",
             "30"
@@ -275,7 +275,7 @@
     },
     "30": {
         "title": "Tombaugh Regio",
-        "excerpt": "Lorem ipsum dolor sit amet 2",
+        "excerpt": "พื้นผิวที่สว่างที่สุดบนดาวพลูโตมีรูปร่างคล้ายหัวใจ",
         "related": [
             "28",
             "29"
