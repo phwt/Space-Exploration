@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,19 @@
     <script src="jquery-3.4.1.min.js"></script>
     <script src="elements.js"></script>
     <script src="script.js"></script>
+
+    <?php if(isset($_GET["s"])): ?>
+        <script>
+            const whereTo = window.innerHeight * (parseInt(<?php echo $_GET["s"]?>) + 1)
+            let checkInt = setInterval(() => {
+                if(window.success){
+                    clearInterval(checkInt)
+                    $(document).scrollTop(whereTo);
+                }
+            }, 100);
+        </script>
+    <?php endif;?>
+
 </head>
 
 <body>

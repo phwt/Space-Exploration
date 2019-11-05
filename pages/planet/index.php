@@ -42,10 +42,10 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
             </div>
         </div>
 
-        <button-back></button-back>
+        <button-back where="<?php echo $cur_page; ?>"></button-back>
 
         <button-files topics='<?php
-        $topics = "";
+        $topics = $cur_page . ",";
         foreach($data->poi as $poi){
             $topics = $topics . $poi->id . ",";
         }
