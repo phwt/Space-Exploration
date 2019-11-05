@@ -92,7 +92,7 @@ class OverlayPlanetInfo extends HTMLElement {
     this.maintitle = '[maintitle]';
     this.subtitle = '[subtitle]';
     this.detail = '[detail]';
-    this.img = undefined;
+    this.poi = undefined;
     this.link = undefined;
   }
 
@@ -109,7 +109,7 @@ class OverlayPlanetInfo extends HTMLElement {
             <h2 class="mb-0" id="overlay-name">` + this.maintitle + `</h2>
             <span id="overlay-name-en">` + this.subtitle + `</span>
             <div class="spacing line"></div>
-            <img id="overlay-img" src="` + this.img + `" alt="">
+            <img id="overlay-img" src="/planet_files/subpage/` + this.poi + `/cover.jpg" alt="">
             <div class="spacing line"></div>
 
             <div id="overlay-info">` + this.detail + `</div>
@@ -124,11 +124,11 @@ class OverlayPlanetInfo extends HTMLElement {
     this.render();
   }
 
-  reloadField(maintitle, subtitle, detail, img) {
+  reloadField(maintitle, subtitle, detail, poi) {
     this.maintitle = maintitle;
     this.subtitle = subtitle;
     this.detail = detail;
-    this.img = img;
+    this.poi = poi;
     this.timecalled++;
 
     if (this.timecalled == 1) {
@@ -150,15 +150,6 @@ class POIPoint extends HTMLElement {
     this.poiID = undefined;
     this.x = 0;
     this.y = 0;
-
-    this.addEventListener('click', () => {
-      document.querySelectorAll('overlay-planet-info')[0].reloadField(
-          window.data_poi[this.poiID].title,
-          window.data_poi[this.poiID].title_en,
-          window.data_poi[this.poiID].excerpt_long,
-          window.data_poi[this.poiID].image
-      );
-    });
   }
 
   connectedCallback() {
@@ -166,6 +157,14 @@ class POIPoint extends HTMLElement {
     this.innerHTML = `
       <div class='poi-point' style='left: ` + this.getAttribute('x') + `%; top: ` + this.getAttribute('y') + `%;'></div>
     `;
+    this.addEventListener('click', () => {
+      document.querySelectorAll('overlay-planet-info')[0].reloadField(
+          window.data_poi[this.poiID].title,
+          window.data_poi[this.poiID].title_en,
+          window.data_poi[this.poiID].excerpt_long,
+          this.poiID
+      );
+    });
   }
 }
 
