@@ -20,7 +20,7 @@
     },
     {
       "name": "ดาวพุธ",
-      "name_en": "ดาวพุธ",
+      "name_en": "Mercury",
       "type": "ดาวเคราะห์หิน (Terrestrial Planet)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 87,
@@ -33,7 +33,7 @@
     },
     {
       "name": "ดาวศุกร์",
-      "name_en": "ดาวศุกร์",
+      "name_en": "Venus",
       "type": "ดาวเคราะห์หิน (Terrestrial Planet)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 224,
@@ -58,7 +58,7 @@
       "link": 3
     }, {
       "name": "ดาวอังคาร",
-      "name_en": "ดาวอังคาร",
+      "name_en": "Mars",
       "type": "ดาวเคราะห์หิน (Terrestrial Planet)",
       "details": "ดาวเคราะห์ลำดับที่สี่จากดวงอาทิตย์ เป็นดาวเคราะห์เล็กที่สุดอันดับที่สองในระบบสุริยะรองจากดาวพุธ เป็นดาวเคราะห์หินที่มีบรรยากาศเบาบาง มีลักษณะพื้นผิวคล้ายคลึงกับทั้งหลุมอุกกาบาตบนดวงจันทร์ และภูเขาไฟ ทะเลทราย ตลอดจนน้ำแข็งขั้วดาวที่ปรากฏบนโลก",
       "orbital_period": 686,
@@ -71,7 +71,7 @@
     },
     {
       "name": "ดาวพฤหัสบดี",
-      "name_en": "ดาวพฤหัสบดี",
+      "name_en": "Jupiter",
       "type": "ดาวแก๊สยักษ์ (Gas Giant)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 4332,
@@ -84,7 +84,7 @@
     },
     {
       "name": "ดาวเสาร์",
-      "name_en": "ดาวเสาร์",
+      "name_en": "Saturn",
       "type": "ดาวแก๊สยักษ์ (Gas Giant)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 10759,
@@ -97,7 +97,7 @@
     },
     {
       "name": "ดาวยูเรนัส",
-      "name_en": "ดาวยูเรนัส",
+      "name_en": "Uranus",
       "type": "ดาวแก๊สยักษ์ (Gas Giant)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 30688,
@@ -110,7 +110,7 @@
     },
     {
       "name": "ดาวเนปจูน",
-      "name_en": "ดาวเนปจูน",
+      "name_en": "Neptune",
       "type": "ดาวแก๊สยักษ์ (Gas Giant)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 60182,
