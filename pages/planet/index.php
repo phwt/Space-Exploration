@@ -11,6 +11,9 @@ echo "<script>let current_page = $cur_page;</script>";
 $json = file_get_contents("../data.json");
 $data = json_decode($json)[$cur_page];
 
+$json = file_get_contents("../data_poi.json");
+$data_poi = json_decode($json);
+
 echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
 
 ?>
@@ -22,8 +25,8 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../elements.js"></script>
     <script src="script.js"></script>
+    <script src="../elements.js"></script>
 </head>
 
 <body>
@@ -35,9 +38,19 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
             <div class="img-wrapper" id="marker-here">
                 <img class="logo" src="<?php echo $data->img_png ?>"/>
                 <?php
-                foreach($data->poi as $poi){
-                    echo "<poi-point poi-idx='$poi->idx' poi-id='$poi->id' x='$poi->x' y='$poi->y'></poi-point>";
+                $count = 0;
+                foreach($data_poi as $key => $poi){
+                    if($count > 4){ break; }
+                    if($poi->parent == $cur_page){
+                        // echo "<script>console.log(". print_r($poi) .")</script>";
+                        // echo $key;
+                        echo "<poi-point poi-id='$key' x='$poi->x' y='$poi->y'></poi-point>";
+                        $count++;
+                    }
                 }
+                // foreach($data->poi as $poi){
+                //     echo "<poi-point poi-idx='$poi->idx' poi-id='$poi->id' x='$poi->x' y='$poi->y'></poi-point>";
+                // }
                 ?>
             </div>
         </div>

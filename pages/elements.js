@@ -124,13 +124,12 @@ class OverlayPlanetInfo extends HTMLElement {
     this.render();
   }
 
-  reloadField(maintitle, subtitle, detail, img, link) {
+  reloadField(maintitle, subtitle, detail, img) {
     this.maintitle = maintitle;
     this.subtitle = subtitle;
     this.detail = detail;
     this.img = img;
     this.timecalled++;
-    this.link = link;
 
     if (this.timecalled == 1) {
       this.render();
@@ -149,24 +148,21 @@ class POIPoint extends HTMLElement {
   constructor() {
     super();
     this.poiID = undefined;
-    this.poiIDX = undefined;
     this.x = 0;
     this.y = 0;
 
     this.addEventListener('click', () => {
       document.querySelectorAll('overlay-planet-info')[0].reloadField(
-          data[current_page].poi[this.poiIDX].title,
-          data[current_page].poi[this.poiIDX].title_en,
-          data[current_page].poi[this.poiIDX].desc,
-          data[current_page].poi[this.poiIDX].image,
-          this.poiID
+          window.data_poi[this.poiID].title,
+          window.data_poi[this.poiID].title_en,
+          window.data_poi[this.poiID].excerpt_long,
+          window.data_poi[this.poiID].image
       );
     });
   }
 
   connectedCallback() {
     this.poiID = this.getAttribute('poi-id');
-    this.poiIDX = this.getAttribute('poi-idx');
     this.innerHTML = `
       <div class='poi-point' style='left: ` + this.getAttribute('x') + `%; top: ` + this.getAttribute('y') + `%;'></div>
     `;
@@ -233,7 +229,6 @@ class OverlayInfo extends OverlayPlanetInfo {
     if (custom != undefined) {
       this.field = custom;
     } else {
-
       this.field = [
         ['ระยะเวลาการโคจร', 0, 'วัน (โลก)'],
         ['ระยะห่างจากดวงอาทิตย์', 0, 'AU'],
