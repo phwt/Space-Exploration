@@ -8,7 +8,13 @@ $data = json_decode($json);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title><?php
+    if (isset($_GET["c"])){
+        echo $data->{$_GET["c"]}->title;
+    } else {
+        echo "Planet Files";
+    }
+    ?></title>
     <script src="../jquery-3.4.1.min.js"></script>
     <script src="../elements.js"></script>
     <link rel="stylesheet" href="../bootstrap.min.css">

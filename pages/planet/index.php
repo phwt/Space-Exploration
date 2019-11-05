@@ -21,7 +21,7 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title><?php echo $data->name . " - " . $data->name_en; ?></title>
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -42,15 +42,10 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
                 foreach($data_poi as $key => $poi){
                     if($count > 4){ break; }
                     if($poi->parent == $cur_page){
-                        // echo "<script>console.log(". print_r($poi) .")</script>";
-                        // echo $key;
                         echo "<poi-point poi-id='$key' x='$poi->x' y='$poi->y'></poi-point>";
                         $count++;
                     }
                 }
-                // foreach($data->poi as $poi){
-                //     echo "<poi-point poi-idx='$poi->idx' poi-id='$poi->id' x='$poi->x' y='$poi->y'></poi-point>";
-                // }
                 ?>
             </div>
         </div>
@@ -59,9 +54,16 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
 
         <button-files topics='<?php
         $topics = $cur_page . ",";
-        foreach($data->poi as $poi){
-            $topics = $topics . $poi->id . ",";
+        foreach($data_poi as $key => $poi){
+            if($count > 5){ break; }
+            if($poi->parent == $cur_page){
+                $topics = $topics . $key . ",";
+                $count++;
+            }
         }
+        // foreach($data->poi as $poi){
+        //     $topics = $topics . $poi->id . ",";
+        // }
         echo rtrim($topics, ',');
         ?>'></button-files>
 
