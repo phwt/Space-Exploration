@@ -123,7 +123,7 @@
       "img": "/img/5-jupiter.svg",
       "img_png": "/img/png/5-jupiter.png",
       "size": 30,
-      "link": 6,
+      "link": 5,
       "poi": []
     },
     {
@@ -137,7 +137,7 @@
       "img": "/img/6-saturn.svg",
       "img_png": "/img/png/6-saturn.png",
       "size": 40,
-      "link": 7,
+      "link": 6,
       "poi": []
     },
     {
@@ -151,7 +151,7 @@
       "img": "/img/7-uranus.svg",
       "img_png": "/img/png/7-uranus.png",
       "size": 26,
-      "link": 8,
+      "link": 7,
       "poi": []
     },
     {
@@ -165,7 +165,7 @@
       "img": "/img/8-neptune.svg",
       "img_png": "/img/png/8-neptune.png",
       "size": 22,
-      "link": 9,
+      "link": 8,
       "poi": []
     }
   ]
