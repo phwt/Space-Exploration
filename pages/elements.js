@@ -98,7 +98,7 @@ class OverlayPlanetInfo extends HTMLElement {
 
   setReadmoreEvent() {
     this.querySelector('.readmore').addEventListener('click', () => {
-      window.location.assign('../planet_files/?c=' + this.link);
+      window.location.assign('../planet_files/?c=' + this.poi);
     });
   }
 
