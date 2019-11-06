@@ -120,6 +120,19 @@
       "img_png": "/img/png/8-neptune.png",
       "size": 22,
       "link": 8
+    },
+    {
+      "name": "ดาวพลูโต",
+      "name_en": "Neptune",
+      "type": "ดาวเคราะห์แคระ (Dwarf Planet)",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
+      "orbital_period": 90560,
+      "au": 39.5,
+      "moons": 5,
+      "img": "/img/8-neptune.svg",
+      "img_png": "/img/png/8-neptune.png",
+      "size": 7,
+      "link": 9
     }
   ]
   
