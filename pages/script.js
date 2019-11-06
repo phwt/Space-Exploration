@@ -4,10 +4,10 @@ const getSectionMid = () => Math.floor($(document).scrollTop() / window.innerHei
 const getMidpoint = (section) => (section * window.innerHeight) + (window.innerHeight / 2);
 const numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 const calcPercent = (start, current) => ((current - start) / ((start + window.innerHeight) - start));
-
+window.success = false;
 let data;
 $.getJSON('data.json', function(datas) {
-  console.log('success');
+  window.success = true;
   data = datas;
 });
 

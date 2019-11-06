@@ -1,16 +1,28 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Space Exploration</title>
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
     <script src="jquery-3.4.1.min.js"></script>
     <script src="elements.js"></script>
     <script src="script.js"></script>
+
+    <?php if(isset($_GET["s"])): ?>
+        <script>
+            const whereTo = window.innerHeight * (parseInt(<?php echo $_GET["s"]?>) + 1)
+            let checkInt = setInterval(() => {
+                if(window.success){
+                    clearInterval(checkInt)
+                    $(document).scrollTop(whereTo);
+                }
+            }, 100);
+        </script>
+    <?php endif;?>
+
 </head>
 
 <body>

@@ -16,12 +16,11 @@
         ["ระยะเวลาโคจรรอบทางช้างเผือก", "230", "ล้านปี (โลก)"],
         ["ระยะห่างจากจุดศูนย์กลางทางช้างเผือก", "27,200", "ปีแสง"],
         ["จำนวนดาวเคราะห์บริวาร", "8", "ดวง"]
-      ],
-      "poi": []
+      ]
     },
     {
       "name": "ดาวพุธ",
-      "name_en": "ดาวพุธ",
+      "name_en": "Mercury",
       "type": "ดาวเคราะห์หิน (Terrestrial Planet)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 87,
@@ -30,12 +29,11 @@
       "img": "/img/1-mercury.svg",
       "img_png": "/img/png/1-mercury.png",
       "size": 10,
-      "link": 1,
-      "poi": []
+      "link": 1
     },
     {
       "name": "ดาวศุกร์",
-      "name_en": "ดาวศุกร์",
+      "name_en": "Venus",
       "type": "ดาวเคราะห์หิน (Terrestrial Planet)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 224,
@@ -44,26 +42,7 @@
       "img": "/img/2-venus.svg",
       "img_png": "/img/png/2-venus.png",
       "size": 17,
-      "link": 2,
-      "poi": [
-        {
-          "id": 9,
-          "x": 14,
-          "y": -10,
-          "title": "สถานีอวกาศนานาชาติ",
-          "title_en": "International Space Station",
-          "desc": "สถานีอวกาศนานาชาติสถานีอวกาศนานาชาติสถานีอวกาศนานาชาติ",
-          "image": "../img/planet/iss.jpg"
-        }, {
-          "id": 10,
-          "x": 5,
-          "y": 15,
-          "title": "กล้องโทรทรรศน์ฮับเบิล",
-          "title_en": "HST",
-          "desc": "กล้องกล้อง",
-          "image": "../img/planet/hst.jpg"
-        }
-      ]
+      "link": 2
     },
     {
       "name": "โลก",
@@ -76,31 +55,10 @@
       "img": "/img/3-earth.svg",
       "img_png": "/img/png/3-earth.png",
       "size": 20,
-      "link": 3,
-      "poi": [
-        {
-          "idx": 0,
-          "id": 9,
-          "x": 14,
-          "y": -10,
-          "title": "สถานีอวกาศนานาชาติ",
-          "title_en": "International Space Station",
-          "desc": "สถานีอวกาศนานาชาติสถานีอวกาศนานาชาติสถานีอวกาศนานาชาติ",
-          "image": "../img/planet/iss.jpg"
-        }, {
-          "idx": 1,
-          "id": 10,
-          "x": 5,
-          "y": 15,
-          "title": "กล้องโทรทรรศน์ฮับเบิล",
-          "title_en": "HST",
-          "desc": "กล้องกล้อง",
-          "image": "../img/planet/hst.jpg"
-        }
-      ]
+      "link": 3
     }, {
       "name": "ดาวอังคาร",
-      "name_en": "ดาวอังคาร",
+      "name_en": "Mars",
       "type": "ดาวเคราะห์หิน (Terrestrial Planet)",
       "details": "ดาวเคราะห์ลำดับที่สี่จากดวงอาทิตย์ เป็นดาวเคราะห์เล็กที่สุดอันดับที่สองในระบบสุริยะรองจากดาวพุธ เป็นดาวเคราะห์หินที่มีบรรยากาศเบาบาง มีลักษณะพื้นผิวคล้ายคลึงกับทั้งหลุมอุกกาบาตบนดวงจันทร์ และภูเขาไฟ ทะเลทราย ตลอดจนน้ำแข็งขั้วดาวที่ปรากฏบนโลก",
       "orbital_period": 686,
@@ -109,12 +67,11 @@
       "img": "/img/4-mars.svg",
       "img_png": "/img/png/4-mars.png",
       "size": 13,
-      "link": 4,
-      "poi": []
+      "link": 4
     },
     {
       "name": "ดาวพฤหัสบดี",
-      "name_en": "ดาวพฤหัสบดี",
+      "name_en": "Jupiter",
       "type": "ดาวแก๊สยักษ์ (Gas Giant)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 4332,
@@ -123,12 +80,11 @@
       "img": "/img/5-jupiter.svg",
       "img_png": "/img/png/5-jupiter.png",
       "size": 30,
-      "link": 6,
-      "poi": []
+      "link": 5
     },
     {
       "name": "ดาวเสาร์",
-      "name_en": "ดาวเสาร์",
+      "name_en": "Saturn",
       "type": "ดาวแก๊สยักษ์ (Gas Giant)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 10759,
@@ -137,12 +93,11 @@
       "img": "/img/6-saturn.svg",
       "img_png": "/img/png/6-saturn.png",
       "size": 40,
-      "link": 7,
-      "poi": []
+      "link": 6
     },
     {
       "name": "ดาวยูเรนัส",
-      "name_en": "ดาวยูเรนัส",
+      "name_en": "Uranus",
       "type": "ดาวแก๊สยักษ์ (Gas Giant)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 30688,
@@ -151,12 +106,11 @@
       "img": "/img/7-uranus.svg",
       "img_png": "/img/png/7-uranus.png",
       "size": 26,
-      "link": 8,
-      "poi": []
+      "link": 7
     },
     {
       "name": "ดาวเนปจูน",
-      "name_en": "ดาวเนปจูน",
+      "name_en": "Neptune",
       "type": "ดาวแก๊สยักษ์ (Gas Giant)",
       "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
       "orbital_period": 60182,
@@ -165,8 +119,20 @@
       "img": "/img/8-neptune.svg",
       "img_png": "/img/png/8-neptune.png",
       "size": 22,
-      "link": 9,
-      "poi": []
+      "link": 8
+    },
+    {
+      "name": "ดาวพลูโต",
+      "name_en": "Neptune",
+      "type": "ดาวเคราะห์แคระ (Dwarf Planet)",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel diam et nisl congue ultricies et et sapien. Proin blandit imperdiet purus vel aliquam.",
+      "orbital_period": 90560,
+      "au": 39.5,
+      "moons": 5,
+      "img": "/img/8-neptune.svg",
+      "img_png": "/img/png/8-neptune.png",
+      "size": 7,
+      "link": 9
     }
   ]
   
