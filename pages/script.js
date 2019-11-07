@@ -22,7 +22,8 @@ function setOverlay(data) {
         data.au,
         data.moons,
       ],
-      data.custom
+      data.custom,
+      data.hide
   );
 }
 
@@ -34,7 +35,11 @@ function updateSection() {
     set_au = calcAU(getSectionMid());
     dist_au = scroll_percentage * (set_au.bottom - set_au.top) + set_au.top;
     au = Math.floor(dist_au * 100) / 100;
-  } catch (TypeError) {
+  } catch (err) {
+    au = '-';
+  }
+
+  if (isNaN(au)) {
     au = '-';
   }
 
@@ -42,6 +47,8 @@ function updateSection() {
 
   if (section == 0) {
     $('#overlay-l, #overlay-r').stop().fadeOut();
+  // } else if (section > 10) {
+    // $('#overlay-l, #overlay-r').fadeOut();
   } else {
     $('#overlay-r').fadeIn();
   }
