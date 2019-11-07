@@ -109,7 +109,7 @@ class OverlayPlanetInfo extends HTMLElement {
             <h2 class="mb-0" id="overlay-name">` + this.maintitle + `</h2>
             <span id="overlay-name-en">` + this.subtitle + `</span>
             <div class="spacing line"></div>
-            <img id="overlay-img" src="/planet_files/subpage/` + this.poi + `/cover.jpg" alt="">
+            <img id="overlay-img" src="../planet_files/subpage/` + this.poi + `/cover.jpg" alt="">
             <div class="spacing line"></div>
 
             <div id="overlay-info">` + this.detail + `</div>
