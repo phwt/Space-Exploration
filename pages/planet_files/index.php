@@ -20,10 +20,10 @@ $data = json_decode($json);
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script>
-        $(document).ready(function() {
-            $("body").hide();
-            $("body").fadeIn();
-        })
+        // $(document).ready(function() {
+        //     $("body").hide();
+        //     $("body").fadeIn();
+        // })
     </script>
 </head>
 
