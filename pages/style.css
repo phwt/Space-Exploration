@@ -6,7 +6,7 @@ body {
     /* background-attachment: fixed; */
 
     background-image:
-        linear-gradient(to bottom, rgba(75, 81, 127, .5), rgba(0, 0, 0, 0)),
+        linear-gradient(rgba(75, 81, 127, .5), rgba(0, 0, 0, 0)),
         url(img/stars-1080.jpg);
 
     font-family: 'Kanit';
@@ -194,4 +194,23 @@ hr {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.4);
+}
+
+div#bottom-cover{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10000;
+    background: url(img/stars-1080.jpg);
+    /* background: linear-gradient(rgba(0,0,0,0), black); */
+}
+
+#bottom-cover>h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
