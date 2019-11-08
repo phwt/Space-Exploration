@@ -45,7 +45,7 @@
     <overlay-info id="overlay-info"></overlay-info>
     <overlay-au id="overlay-au"></overlay-au>
 
-    <div id="bottom-cover">
+    <div id="bottom-cover" style="display: none;">
         <h1>There's more to explore!</h1>
     </div>
 </body>
