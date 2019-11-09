@@ -26,10 +26,12 @@
 </head>
 
 <body>
-    <div class="h-100 text-center">
+    <div class="h-100 text-center text-white">
         <div class="center-me">
             <img class="mb-5" id="top-logo" src="https://via.placeholder.com/400x300?text=Logo" alt=""><br>
-            <button class="mt-5 btn-space" id="btn-open-section">Let's Go!</button>
+            <h2 class="font-weight-normal">เริ่มการสำรวจ!</h2>
+            <img src="img/down-chevron.png" alt="">
+            <!-- <button class="mt-5 btn-space" id="btn-open-section">Let's Go!</button> -->
         </div>
     </div>
 
