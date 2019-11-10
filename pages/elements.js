@@ -1,13 +1,13 @@
 class CelestialBodies extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-            <div class="h-100">
-                <div class="bodies" style="width:` + this.getAttribute('size') + `%">
-                    <a href="planet?p=` + this.getAttribute('id') + `">
-                        <img src="` + this.getAttribute('src') + `">
-                    </a>
-                </div>
-            </div>`;
+        <div class="h-100">
+            <div class="bodies" style="width:` + this.getAttribute('size') + `%">
+                <a href="planet?p=` + this.getAttribute('id') + `">
+                    <img src="` + this.getAttribute('src') + `">
+                </a>
+            </div>
+        </div>`;
   }
 }
 

@@ -173,7 +173,17 @@ div.info {
     z-index: 5;
     transition: .2s;
     position: absolute;
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: .5;}
+    100% {opacity: 1;}
+}
+
 
 .mock-pos-0{
     top: 59%;
