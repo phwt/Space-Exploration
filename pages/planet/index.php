@@ -53,7 +53,7 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
         <button-files topics='<?php
         $topics = $cur_page . ",";
         foreach($data_poi as $key => $poi){
-            if($count > 5){ break; }
+            if($count > 7){ break; }
             if($poi->parent == $cur_page){
                 $topics = $topics . $key . ",";
                 $count++;
