@@ -32,7 +32,6 @@
             <br><br><br><br>
             <div style="font-weight: 200; font-size: 25px;">เริ่มการสำรวจ !</div>
             <img class="blink-me" style="width: 32px;" src="img/down-chevron.png" alt="">
-            <!-- <button class="mt-5 btn-space" id="btn-open-section">Let's Go!</button> -->
         </div>
     </div>
 
