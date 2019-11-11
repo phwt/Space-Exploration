@@ -22,6 +22,8 @@ body {
     /* Standard */
 
     overflow-x: hidden;
+
+    transform: translateY(-10px);
 }
 
 a,
@@ -233,4 +235,11 @@ div#bottom-cover {
 
 [no_hover=true] a:hover{
     cursor: default !important;
+}
+
+@keyframes planet-tilt {
+    0% { transform: rotate(0deg) }
+    25% { transform: rotate(5deg) }
+    50% { transform: rotate(0deg) }
+    100% { transform: rotate(0deg) }
 }

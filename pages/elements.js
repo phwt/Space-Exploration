@@ -4,7 +4,10 @@ class CelestialBodies extends HTMLElement {
         <div class="h-100">
             <div class="bodies" style="width:` + this.getAttribute('size') + `%">
                 <a href="planet?p=` + this.getAttribute('id') + `">
-                    <img src="` + this.getAttribute('src') + `">
+                    <img style="animation-name: planet-tilt;
+                    animation-duration: 2.5s;
+                    animation-delay: `+ Math.random() * 2 +`s;
+                    animation-iteration-count: infinite;" src="` + this.getAttribute('src') + `">
                 </a>
             </div>
         </div>`;
