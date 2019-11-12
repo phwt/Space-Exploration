@@ -6,7 +6,7 @@ body {
     /* background-attachment: fixed; */
 
     background-image:
-        linear-gradient(to bottom, rgba(75, 81, 127, .5), rgba(0, 0, 0, 0)),
+        linear-gradient(rgba(75, 81, 127, .5), rgba(0, 0, 0, 0)),
         url(img/stars-1080.jpg);
 
     font-family: 'Kanit';
@@ -22,6 +22,8 @@ body {
     /* Standard */
 
     overflow-x: hidden;
+
+    transform: translateY(-10px);
 }
 
 a,
@@ -98,7 +100,7 @@ div.h-100>.bodies,
     transform: translateY(50%);
 }
 
-#overlay-r > .overlay-box::before{
+#overlay-r>.overlay-box::before {
     content: "◀";
     position: absolute;
     top: 50%;
@@ -194,4 +196,50 @@ hr {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.4);
+}
+
+div#bottom-cover {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10000;
+    background: url(img/stars-1080.jpg);
+    /* background: linear-gradient(rgba(0,0,0,0), black); */
+}
+
+#bottom-cover>h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#btn-open-section {
+    z-index: 10000;
+}
+
+.blink-me {
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0% {opacity: 1; padding-top: 0}
+    50% {opacity: .5; padding-top: 1em}
+    100% {opacity: 1; padding-top: 0}
+}
+
+[no_hover=true] a:hover{
+    cursor: default !important;
+}
+
+@keyframes planet-tilt {
+    0% { transform: rotate(0deg) }
+    25% { transform: rotate(5deg) }
+    50% { transform: rotate(0deg) }
+    100% { transform: rotate(0deg) }
 }

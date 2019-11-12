@@ -1,13 +1,16 @@
 class CelestialBodies extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-            <div class="h-100">
-                <div class="bodies" style="width:` + this.getAttribute('size') + `%">
-                    <a href="planet?p=` + this.getAttribute('id') + `">
-                        <img src="` + this.getAttribute('src') + `">
-                    </a>
-                </div>
-            </div>`;
+        <div class="h-100">
+            <div class="bodies" style="width:` + this.getAttribute('size') + `%">
+                <a href="planet?p=` + this.getAttribute('id') + `">
+                    <img style="animation-name: planet-tilt;
+                    animation-duration: 2.5s;
+                    animation-delay: `+ Math.random() * 2 +`s;
+                    animation-iteration-count: infinite;" src="` + this.getAttribute('src') + `">
+                </a>
+            </div>
+        </div>`;
   }
 }
 
@@ -109,7 +112,7 @@ class OverlayPlanetInfo extends HTMLElement {
             <h2 class="mb-0" id="overlay-name">` + this.maintitle + `</h2>
             <span id="overlay-name-en">` + this.subtitle + `</span>
             <div class="spacing line"></div>
-            <img id="overlay-img" src="/planet_files/subpage/` + this.poi + `/cover.jpg" alt="">
+            <img id="overlay-img" src="../planet_files/subpage/` + this.poi + `/cover.jpg" alt="">
             <div class="spacing line"></div>
 
             <div id="overlay-info">` + this.detail + `</div>
@@ -201,7 +204,7 @@ class OverlayInfo extends OverlayPlanetInfo {
     return fieldElem;
   }
 
-  render() {
+  render(hide) {
     this.innerHTML = `
         <div class="row text-white" id="overlay-l" style="display: none">
             <div class="col-12 text-center overlay-box bottom" id="box-detail">
@@ -212,13 +215,13 @@ class OverlayInfo extends OverlayPlanetInfo {
                 <div class="spacing line"></div>
                 <div class="row row-info">` + this.getFields() + `</div>
             </div>
-            <div class="col-12 overlay-box readmore text-center"> อ่านเพิ่มเติม &gt; </div>
+            <div class="col-12 overlay-box readmore text-center ` + ((hide) ? 'd-none' : '') + `"> อ่านเพิ่มเติม &gt; </div>
         </div>
         `;
     this.setReadmoreEvent();
   }
 
-  reloadField(name, type, detail, link, field, custom) {
+  reloadField(name, type, detail, link, field, custom, hide) {
     this.timecalled = 0;
     this.name = name;
     this.type = type;
@@ -243,13 +246,13 @@ class OverlayInfo extends OverlayPlanetInfo {
     this.timecalled++;
 
     if (this.timecalled == 1) {
-      this.render();
+      this.render(hide);
       $(this).find('div').fadeIn();
       return;
     }
 
     $(this).find('div').fadeOut(() => {
-      this.render();
+      this.render(hide);
       $(this).find('div').fadeIn();
     });
   }
