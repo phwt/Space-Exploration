@@ -271,7 +271,7 @@ class OverlayInfo extends OverlayPlanetInfo {
 class CurrentCard extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<div>
-      <h3>▶&#xFE0E;&nbsp;` + this.getAttribute('heading') + `</h3>
+      <h4>▶&#xFE0E;&nbsp;` + this.getAttribute('heading') + `</h4>
       ` + this.getAttribute('excerpt') + `
       </div><hr>
     `;
@@ -288,7 +288,7 @@ class RelatedCard extends CurrentCard {
 
   connectedCallback() {
     this.innerHTML = `<div>
-      <h3>` + this.getAttribute('heading') + `</h3>
+      <h4>` + this.getAttribute('heading') + `</h4>
       ` + this.getAttribute('excerpt') + `
       </div><hr>
     `;
