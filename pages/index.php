@@ -72,6 +72,8 @@
                 <li>นายสหัสวรรษ หิรัญเพชร รหัสนักศึกษา 61070239</li>
                 <li>นายอริญชย์ อวยเจริญ รหัสนักศึกษา 61070350</li>
             </ul>
+            <br>
+            <a target="_blank" href="https://github.com/phwt/Space-Exploration"><h4>ดูโครงงานนี้บน GitHub!</h4></a>
         </span>
     </div>
 </body>
