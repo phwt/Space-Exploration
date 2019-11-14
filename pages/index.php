@@ -55,7 +55,7 @@
 
     <div id="bottom-cover" style="display: none;">
         <span class="text-center">
-            <h2>ยังมีอีกมากมายให้เราค้นหาในจักรวาลอันกว้างใหญ่นี้</h2>
+            <h2 class="text-nowrap">ยังมีอีกมากมายให้เราค้นหาในจักรวาลอันกว้างใหญ่นี้</h2>
             <br><br><br>
             <h4>กลุ่ม 13 - Space Exploration การสำรวจอวกาศ</h4>
             <ul style="list-style-position:inside;">
