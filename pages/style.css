@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
 
+html {
+    background: black;
+}
+
 body {
     /* background: url(stars-1080.jpg); */
     /* background: linear-gradient(rgba(255,255,255,0.5), green); */
@@ -209,7 +213,7 @@ div#bottom-cover {
     /* background: linear-gradient(rgba(0,0,0,0), black); */
 }
 
-#bottom-cover>h2 {
+#bottom-cover>span {
     position: absolute;
     top: 50%;
     left: 50%;
