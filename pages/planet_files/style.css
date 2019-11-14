@@ -33,8 +33,16 @@ div.back > h2{
     transition: .2s;
 }
 
-div.back:hover .triangle{
+/* div.back:hover .triangle{
     margin-left: -15%;
+} */
+
+div.back > h2 {
+    transition: .2s;
+}
+
+div.back:hover > h2{
+    font-weight: 400 !important;
 }
 
 .row.paper{
@@ -42,8 +50,16 @@ div.back:hover .triangle{
 }
 
 .bg-file{
+    background: rgba(255,255,255,.1);
+    border: 1px solid white;
+    border-bottom: 0;
+    color: white;
     /* background: lightgoldenrodyellow; */
-    background: hsl(60, 33%, 82%);
+    /* background: hsl(60, 33%, 82%); */
+}
+
+.bg-file.no-left {
+    border-left: 0 !important;
 }
 
 .h-custom{
@@ -80,8 +96,8 @@ card-related > div {
 
 card-related > div:hover {
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.1);
-    outline: 1em solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    outline: 1em solid rgba(0, 0, 0, 0.3);
 }
 
 /* .triangle-nav.left:hover{

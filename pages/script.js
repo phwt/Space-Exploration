@@ -42,6 +42,12 @@ function setOverlay(data) {
 function updateSection() {
   section = getSection();
 
+  if (section < 1) {
+    $('celestial-bodies').attr('link', 'false');
+  } else {
+    $('celestial-bodies').attr('link', 'true');
+  }
+
   try {
     scroll_percentage = calcPercent(getMidpoint(getSectionMid()), $(document).scrollTop() + window.innerHeight / 2);
     set_au = calcAU(getSectionMid());

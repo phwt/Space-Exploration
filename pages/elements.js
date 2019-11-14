@@ -1,16 +1,25 @@
 class CelestialBodies extends HTMLElement {
-  connectedCallback() {
+  render() {
     this.innerHTML = `
         <div class="h-100">
-            <div class="bodies" style="width:` + this.getAttribute('size') + `%">
-                <a href="planet?p=` + this.getAttribute('id') + `">
-                    <img style="animation-name: planet-tilt;
+            <div class="bodies" style="width:` + this.getAttribute('size') + `%">` +
+                    ((this.getAttribute('link') == 'true') ? `<a href="planet?p=` + this.getAttribute('id') + `">` : `<a href="javascript:">`)+
+                    `<img style="animation-name: planet-tilt;
                     animation-duration: 2.5s;
                     animation-delay: `+ Math.random() * 2 +`s;
                     animation-iteration-count: infinite;" src="` + this.getAttribute('src') + `">
                 </a>
             </div>
         </div>`;
+  }
+  connectedCallback() {
+    this.render();
+  }
+  static get observedAttributes() {
+    return ['link'];
+  }
+  attributeChangedCallback(attrName, oldVal, newVal) {
+    this.render();
   }
 }
 
@@ -22,8 +31,9 @@ class OverlayAU extends HTMLElement {
   }
 
   getAUinKM() {
-    const km = Math.floor(this.au * 149597871);
-    return (isNaN(km)) ? '-' : numberWithCommas(km);
+    let km = Math.floor(this.au * 149597871);
+    km = Math.round(km / 10000)/100;
+    return (isNaN(km)) ? '-' : numberWithCommas(km) + ' ล้าน';
   }
 
   render() {
@@ -158,7 +168,7 @@ class POIPoint extends HTMLElement {
   connectedCallback() {
     this.poiID = this.getAttribute('poi-id');
     this.innerHTML = `
-      <div class='poi-point' style='left: ` + this.getAttribute('x') + `%; top: ` + this.getAttribute('y') + `%;'></div>
+      <div class='poi-point' style='animation-delay: `+ Math.random() * 2 +`s;left: ` + this.getAttribute('x') + `%; top: ` + this.getAttribute('y') + `%;'></div>
     `;
     this.addEventListener('click', () => {
       document.querySelectorAll('overlay-planet-info')[0].reloadField(
@@ -261,7 +271,7 @@ class OverlayInfo extends OverlayPlanetInfo {
 class CurrentCard extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<div>
-      <h3>▶&#xFE0E;&nbsp;` + this.getAttribute('heading') + `</h3>
+      <h4>▶&#xFE0E;&nbsp;` + this.getAttribute('heading') + `</h4>
       ` + this.getAttribute('excerpt') + `
       </div><hr>
     `;
@@ -278,7 +288,7 @@ class RelatedCard extends CurrentCard {
 
   connectedCallback() {
     this.innerHTML = `<div>
-      <h3>` + this.getAttribute('heading') + `</h3>
+      <h4>` + this.getAttribute('heading') + `</h4>
       ` + this.getAttribute('excerpt') + `
       </div><hr>
     `;
@@ -290,7 +300,7 @@ class FilesButton extends HTMLElement {
     this.innerHTML = `
         <div class="files">
             <div class="wrapper">
-                <h2>แฟ้มข้อมูล</h2>
+                <h2 class="text-nowrap">แฟ้มข้อมูล</h2>
             </div>
         </div>
         `;

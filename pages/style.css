@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400&display=swap');
 
+html {
+    background: black;
+}
+
 body {
     /* background: url(stars-1080.jpg); */
     /* background: linear-gradient(rgba(255,255,255,0.5), green); */
@@ -101,7 +105,7 @@ div.h-100>.bodies,
 }
 
 #overlay-r>.overlay-box::before {
-    content: "◀";
+    content: "◀\00FE0E";
     position: absolute;
     top: 50%;
     left: -1em;
@@ -209,7 +213,7 @@ div#bottom-cover {
     /* background: linear-gradient(rgba(0,0,0,0), black); */
 }
 
-#bottom-cover>h2 {
+#bottom-cover>span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -227,10 +231,16 @@ div#bottom-cover {
     animation-iteration-count: infinite;
 }
 
-@keyframes example {
+/* @keyframes example {
     0% {opacity: 1; padding-top: 0}
     50% {opacity: .5; padding-top: 1em}
     100% {opacity: 1; padding-top: 0}
+} */
+
+@keyframes example {
+    0% {line-height: 1em}
+    50% {line-height: 2em}
+    100% {line-height: 1em}
 }
 
 [no_hover=true] a:hover{
@@ -243,3 +253,12 @@ div#bottom-cover {
     50% { transform: rotate(0deg) }
     100% { transform: rotate(0deg) }
 }
+
+@media only screen and (max-width: 768px) {
+    overlay-info, overlay-au {
+      display: none;
+    }
+    /* .bodies > a > img{
+        transform: scale(1.5);
+    } */
+  }
