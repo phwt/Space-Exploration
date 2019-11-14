@@ -1,16 +1,25 @@
 class CelestialBodies extends HTMLElement {
-  connectedCallback() {
+  render() {
     this.innerHTML = `
         <div class="h-100">
-            <div class="bodies" style="width:` + this.getAttribute('size') + `%">
-                <a href="planet?p=` + this.getAttribute('id') + `">
-                    <img style="animation-name: planet-tilt;
+            <div class="bodies" style="width:` + this.getAttribute('size') + `%">` +
+                    ((this.getAttribute('link') == 'true') ? `<a href="planet?p=` + this.getAttribute('id') + `">` : `<a href="javascript:">`)+
+                    `<img style="animation-name: planet-tilt;
                     animation-duration: 2.5s;
                     animation-delay: `+ Math.random() * 2 +`s;
                     animation-iteration-count: infinite;" src="` + this.getAttribute('src') + `">
                 </a>
             </div>
         </div>`;
+  }
+  connectedCallback() {
+    this.render();
+  }
+  static get observedAttributes() {
+    return ['link'];
+  }
+  attributeChangedCallback(attrName, oldVal, newVal) {
+    this.render();
   }
 }
 
@@ -290,7 +299,7 @@ class FilesButton extends HTMLElement {
     this.innerHTML = `
         <div class="files">
             <div class="wrapper">
-                <h2>แฟ้มข้อมูล</h2>
+                <h2 class="text-nowrap">แฟ้มข้อมูล</h2>
             </div>
         </div>
         `;
