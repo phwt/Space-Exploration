@@ -39,7 +39,7 @@ $data = json_decode($json);
     ?>'></button-back-spc>
 
     <div class="h-custom row paper no-gutters pt-5 h-100">
-        <div class="d-none d-md-block col-2 bg-file file-side p-4">
+        <div class="d-none d-md-block col-2 bg-file no-left file-side p-4">
             <div class="related">
 
                 <?php
