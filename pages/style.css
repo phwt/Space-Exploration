@@ -243,3 +243,12 @@ div#bottom-cover {
     50% { transform: rotate(0deg) }
     100% { transform: rotate(0deg) }
 }
+
+@media only screen and (max-width: 768px) {
+    overlay-info, overlay-au {
+      display: none;
+    }
+    /* .bodies > a > img{
+        transform: scale(1.5);
+    } */
+  }

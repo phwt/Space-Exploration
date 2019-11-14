@@ -36,8 +36,8 @@ $data = json_decode($json);
         }
     ?>'></button-back-spc>
 
-    <div class="h-custom row paper no-gutters pt-5">
-        <div class="col-2 bg-file file-side p-4">
+    <div class="h-custom row paper no-gutters pt-5 h-100">
+        <div class="d-none d-md-block col-2 bg-file file-side p-4">
             <div class="related">
 
                 <?php
@@ -81,7 +81,7 @@ $data = json_decode($json);
         </div>
 
         <div class="col-1 text-center"></div>
-        <div class="col-8 bg-file p-4 center-file">
+        <div class="col-md-8 col-10 bg-file p-4 center-file">
             <?php if (isset($_GET["c"])) : ?>
 
                 <h1 class="text-center"><?php echo $cur_data->title ?></h1>
