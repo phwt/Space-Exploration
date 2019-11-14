@@ -168,7 +168,7 @@ class POIPoint extends HTMLElement {
   connectedCallback() {
     this.poiID = this.getAttribute('poi-id');
     this.innerHTML = `
-      <div class='poi-point' style='left: ` + this.getAttribute('x') + `%; top: ` + this.getAttribute('y') + `%;'></div>
+      <div class='poi-point' style='animation-delay: `+ Math.random() * 2 +`s;left: ` + this.getAttribute('x') + `%; top: ` + this.getAttribute('y') + `%;'></div>
     `;
     this.addEventListener('click', () => {
       document.querySelectorAll('overlay-planet-info')[0].reloadField(
