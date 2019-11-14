@@ -31,8 +31,9 @@ class OverlayAU extends HTMLElement {
   }
 
   getAUinKM() {
-    const km = Math.floor(this.au * 149597871);
-    return (isNaN(km)) ? '-' : numberWithCommas(km);
+    let km = Math.floor(this.au * 149597871);
+    km = Math.round(km / 10000)/100;
+    return (isNaN(km)) ? '-' : numberWithCommas(km) + ' ล้าน';
   }
 
   render() {
