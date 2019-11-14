@@ -15,6 +15,8 @@ $data = json_decode($json);
         echo "Planet Files";
     }
     ?></title>
+    <script>this.customElements||document.write('<script src="https://unpkg.com/document-register-element@1.14.3/build/document-register-element.js"><\x2fscript>');</script>
+    <script src="https://unpkg.com/@ungap/custom-elements-builtin@0.2.7/min.js"></script>
     <script src="../jquery-3.4.1.min.js"></script>
     <script src="../elements.js"></script>
     <link rel="stylesheet" href="../bootstrap.min.css">
