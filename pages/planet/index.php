@@ -32,8 +32,6 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
 <body>
     <div class="container-fluid h-100">
 
-        <!-- <div class="mock-moon text-center">Moon</div> -->
-
         <div class="shadow">
             <div class="img-wrapper" id="marker-here">
                 <img class="logo" src="<?php echo $data->img_png ?>"/>
@@ -55,15 +53,13 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
         <button-files topics='<?php
         $topics = $cur_page . ",";
         foreach($data_poi as $key => $poi){
-            if($count > 5){ break; }
+            if($count > 7){ break; }
             if($poi->parent == $cur_page){
                 $topics = $topics . $key . ",";
                 $count++;
             }
         }
-        // foreach($data->poi as $poi){
-        //     $topics = $topics . $poi->id . ",";
-        // }
+
         echo rtrim($topics, ',');
         ?>'></button-files>
 

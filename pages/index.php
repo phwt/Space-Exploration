@@ -26,10 +26,12 @@
 </head>
 
 <body>
-    <div class="h-100 text-center">
+    <div class="h-100 text-center text-white">
         <div class="center-me">
-            <img class="mb-5" id="top-logo" src="https://via.placeholder.com/400x300?text=Logo" alt=""><br>
-            <button class="mt-5 btn-space" id="btn-open-section">Let's Go!</button>
+            <img class="mb-5" id="top-logo" src="img/front_logo.png" alt="">
+            <br><br><br><br>
+            <div style="font-weight: 200; font-size: 25px;">เริ่มการสำรวจ !</div>
+            <img class="blink-me" style="width: 32px;" src="img/down-chevron.png" alt="">
         </div>
     </div>
 
@@ -38,6 +40,12 @@
         $json = file_get_contents("data.json");
         $data = json_decode($json);
         foreach ($data as $value) {
+            if (isset($value->no_hover)){
+                if($value->no_hover){
+                    echo "<celestial-bodies id='$value->link' size='$value->size' src='$value->img' no_hover='true'></celestial-bodies>";
+                    continue;
+                }
+            }
             echo "<celestial-bodies id='$value->link' size='$value->size' src='$value->img'></celestial-bodies>";
         }
         ?></span>
@@ -46,7 +54,7 @@
     <overlay-au id="overlay-au"></overlay-au>
 
     <div id="bottom-cover" style="display: none;">
-        <h1>There's more to explore!</h1>
+        <h2>ยังมีอีกมากมายให้เราค้นหาในจักรวาลอันกว้างใหญ่นี้</h2>
     </div>
 </body>
 
