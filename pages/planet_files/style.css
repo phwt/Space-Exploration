@@ -33,8 +33,16 @@ div.back > h2{
     transition: .2s;
 }
 
-div.back:hover .triangle{
+/* div.back:hover .triangle{
     margin-left: -15%;
+} */
+
+div.back > h2 {
+    transition: .2s;
+}
+
+div.back:hover > h2{
+    font-weight: 400 !important;
 }
 
 .row.paper{
