@@ -30,8 +30,8 @@
         <div class="center-me">
             <img class="mb-5" id="top-logo" src="img/front_logo.png" alt="">
             <br><br><br><br>
-            <div style="font-weight: 200; font-size: 25px;">เริ่มการสำรวจ !</div>
-            <img class="blink-me" style="width: 32px;" src="img/down-chevron.png" alt="">
+            <div class="blink-me slide-down" style="font-weight: 200; font-size: 25px;">เริ่มการสำรวจ !</div>
+            <img class="slide-down" style="width: 32px;" src="img/down-chevron.png" alt="">
         </div>
     </div>
 

@@ -231,10 +231,16 @@ div#bottom-cover {
     animation-iteration-count: infinite;
 }
 
-@keyframes example {
+/* @keyframes example {
     0% {opacity: 1; padding-top: 0}
     50% {opacity: .5; padding-top: 1em}
     100% {opacity: 1; padding-top: 0}
+} */
+
+@keyframes example {
+    0% {line-height: 1em}
+    50% {line-height: 2em}
+    100% {line-height: 1em}
 }
 
 [no_hover=true] a:hover{
