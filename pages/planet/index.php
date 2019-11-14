@@ -27,6 +27,8 @@ echo "<script>const data = JSON.parse(`" . $json . "`)</script>";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <script src="../elements.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 </head>
 
 <body>
